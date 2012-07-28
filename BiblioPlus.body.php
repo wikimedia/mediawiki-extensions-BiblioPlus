@@ -12,7 +12,6 @@ class BiblioPlus {
      * @author Karen Eddy
      */
     function __construct() {
-        $this->SetupHooks();
     }
 
     /*
@@ -232,14 +231,14 @@ class BiblioPlus {
 
         //set the link for the citation itself
         if ($doi != '') {
-            $title = 'title="View or buy article from publisher"';
+            $title = 'title="'. wfMsg('doi-tooltip') .'"';
             $result = "<a href=\"http://dx.doi.org/$doi\" $title $style>$result</a>";
             $codes .= " " . $this -> HtmlInterLink("http://dx.doi.org/$doi", $this -> smallCaps("DOI:") . $doi, "DOI: $doi") . " |";
         } else if ($pmid != '') {
-            $title = 'title="View or buy article from publisher (if available)"';
+            $title = 'title="' .wfMsg('pmid-tooltip') . '"';
             $result = "<a href=\"http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=$pmid\" $title $style>$result</a>";
         } else if ($isbn != '') {
-            $title = 'title="Book information at isbndb.org"';
+            $title = 'title="' . wfMsg('isbn-tooltip') . '"';
             $result = "<a href=\"http://isbndb.com/d/book/$isbndbref.html\" $title $style>$result</a>";
             $codes .= " " . $this -> HtmlInterLink("http://isbndb.com/d/book/$isbndbref.html", $this -> smallCaps("ISBN:") . $isbn, "ISBN:$isbn");
         }
@@ -392,10 +391,9 @@ class BiblioPlus {
      */
     function IsbnDbQuery($isbns) {
         $result = array();
-        $cache = &wfGetMainCache();
-        global $wgDBname;
+        $cache = wfGetMainCache();
         foreach ($isbns as $isbn) {
-            $cache_key = "$wgDBname:Biblio:$isbn";
+            $cache_key = wfMemckey('Biblio', $isbn);
             if ($res = $cache -> get($cache_key)) {
                 wfDebug("Biblio cache hit $cache_key\n");
             } else {
@@ -615,19 +613,6 @@ class BiblioPlus {
     }
 
 
-    /***************************************
-     * SETUP - Initializes the parser hooks.
-     ***************************************
-     * @author Karen Eddy 
-     */
-     function SetupHooks() {
-        global $wgParser, $wgHooks;
-        $wgParser -> setHook("cite", array(&$this,"Biblio_render_cite"));
-        $wgParser -> setHook("nocite", array( &$this,"Biblio_render_nocite"));
-        $wgParser -> setHook("biblio", array( &$this,"Biblio_render_biblio"));
-        return true;
-    }
-     
     /*******************************
      * MEDIAWIKI CALLBACKS FOR TAGS
      *******************************
@@ -661,7 +646,7 @@ class BiblioPlus {
      */    
      function Biblio_render_biblio($input, $params, $parser = null) {
         global $BiblioForce;
-        $force = @isset($params['force']) ? ($params['force'] == "true") : $BiblioForce;
+        $force = isset($params['force']) ? ($params['force'] == "true") : $BiblioForce;
         return $this->render_biblio($input, $this->Biblio_get_parser_data($parser), $force);
     }
      
@@ -734,8 +719,6 @@ class BiblioPlus {
      * @return - array of formatted references
      */
     function render_biblio($input, $pdata, $force) {
-        global $wgDBname;
-
         $refs = array();
         $list = $this->expandList($this -> split_biblio($input));
         $parseResult = $this->parseBiblio($list);
@@ -748,7 +731,7 @@ class BiblioPlus {
         //caching features
         $cache = &wfGetMainCache();
         foreach ($pmids as $pmid) {
-            $cache_key = "$wgDBname:Biblio:$pmid";
+            $cache_key = wfMemcKey('Biblio', $pmid);
             if ($res = $cache -> get($cache_key)) {
                 wfDebug("Biblio cache hit $cache_key\n");
                 $pmentries["$pmid"] = $res;
@@ -771,7 +754,7 @@ class BiblioPlus {
 
         //set the cache for the formatted pmid citations just returned from eSummary
         foreach ($pmentries as $pmid => $value) {
-            $cache_key = "$wgDBname:Biblio:$pmid";
+            $cache_key = wfMemcKey('Biblio' , $pmid);
             $cache -> set($cache_key, $value, CACHE_TTL);
         }
         
@@ -826,7 +809,7 @@ class BiblioPlus {
             $header = $this -> errorbox(implode("<br>", $errors));
         }
         if (count($sorted_pmids) > 1) {
-            $footer .= 'All Medline abstracts: ' . $this -> HtmlInterLink($this -> PubMedUrl($sorted_pmids), $this -> smallCaps("PubMed"), "All abstracts at PubMed") . " | " . $this -> HtmlInterLink($this -> HubMedUrl($sorted_pmids), $this -> smallCaps("HubMed"), "All abstracts at HubMed");
+            $footer .= wfMsg('medline-abstracts') . ' ' . $this -> HtmlInterLink($this -> PubMedUrl($sorted_pmids), $this -> smallCaps("PubMed"), wfMsg('pubmed-abstracts')) . " | " . $this -> HtmlInterLink($this -> HubMedUrl($sorted_pmids), $this -> smallCaps("HubMed"), wfMsg('hubmed-abstracts'));
             $footer = $this -> noprint($footer);
         }
         $result = array();
@@ -838,7 +821,7 @@ class BiblioPlus {
             $vkey = "<span style=\"color:#aaa\">[$key]</span>";
             if (isset($ref['biburl'])) {
                 $biburl = htmlspecialchars($ref['biburl']);
-                $vkey = "<a href=\"$biburl\" class=\"extiw\" style=\"text-decoration:none\" title=\"link to bibliography database\">$vkey</a>";
+                $vkey = '<a href="' .$biburl .'" class="extiw" style="text-decoration:none" title="' . wfMsg('vkey-title') . '">' . $vkey . '</a>';
             }
             $vkey = $this -> noprint($vkey);
             $vkey .= " $annot";
@@ -847,7 +830,7 @@ class BiblioPlus {
 
         //error_reporting($initial_error_reporting);
         global $version;
-        return $header . "<!-- produced by BiblioPlus version " . $version . " --><br>" 
+        return $header . "<!-- Produced by BiblioPlus version " . $version . " --><br>" 
             . '<ol>' . implode("", $result) . '</ol>' . $footer;
     }
  
