@@ -159,13 +159,16 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'BiblioPlus',
 	'descriptionmsg' => 'biblioplus-desc',
 	'version' => $version,
-	'author' => array( 'Karen Eddy', 'code from the Biblio extension by Martin Jambon' ),
+	'author' => array( 'Karen Eddy', 'Code from the Biblio extension by Martin Jambon' ),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
 );
 
 $wgHooks['ParserFirstCallInit'][] = 'BiblioPlusSetup';
 
-function BiblioPlusSetup( &$parser ) {
-	new BiblioPlus;
-	return true;
+function BiblioPlusSetup( Parser $parser ) {
+    $biblio = new BiblioPlus;
+    $parser -> setHook("cite", array($biblio,'Biblio_render_cite'));
+    $parser -> setHook("nocite", array($biblio, 'Biblio_render_nocite'));
+    $parser -> setHook("biblio", array($biblio, 'Biblio_render_biblio'));
+    return true;    
 }

@@ -12,7 +12,15 @@ $messages = array();
  * @author Karen Eddy
  */
 $messages['en'] = array(
+<<<<<<< HEAD
 	'biblioplus-desc' => 'Automatically retrieves citations from PubMed and the ISBN database',
+    'doi-tooltip' => 'View or buy article from publisher',
+    'pmid-tooltip' => 'View or buy article from publisher (if available)',
+    'isbn-tooltip' => 'Book information at isbndb.org',
+    'medline-abstracts' => 'All Medline abstracts:',
+    'pubmed-abstracts' => 'All abstracts at PubMed',
+    'hubmed-abstracts' => 'All abstracts at HubMed',
+    'vkey-title' => 'link to bibliography database'
 );
 
 /** Message documentation (Message documentation) */
@@ -52,7 +60,7 @@ $messages['it'] = array(
  * @author Shirayuki
  */
 $messages['ja'] = array(
-	'biblioplus-desc' => 'PubMed および ISBN データベースから引用を自動的に取得する',
+	'biblioplus-desc' => 'PubMed �?�よ�?� ISBN データベース�?�ら引用を自動的�?��?�得�?�る',
 );
 
 /** Maltese (Malti)
@@ -68,4 +76,6 @@ $messages['mt'] = array(
 $messages['tl'] = array(
 	'biblioplus-desc' => 'Kusang kumukuhang muli ng mga pagbanggit magmula sa kalipunan ng dato ng PubMed at ng ISBN',
 );
+
+
 
