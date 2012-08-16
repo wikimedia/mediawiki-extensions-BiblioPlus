@@ -155,18 +155,17 @@ $wgAutoloadClasses['BiblioPlus'] = $dir . 'BiblioPlus.body.php';
 $wgExtensionMessagesFiles['BiblioPlus'] = "$dir/BiblioPlus.i18n.php";
 
 $wgExtensionCredits['parserhook'][] = array(
-    'path' => __FILE__, 
-    'name' => "BiblioPlus", 
-    'description' => "Automated retrieval of citations from Pub Med and the ISBN database. Formats in-text and reference section citations.", 
-    'descriptionmsg' => "BiblioPlus-desc", 
-    'version' => $version, 
-    'author' => "Karen Eddy, with code from the Biblio extension by Martin Jambon", 
-    'url' => "http://www.mediawiki.org/wiki/Extension:BiblioPlus", );
+	'path' => __FILE__,
+	'name' => 'BiblioPlus',
+	'descriptionmsg' => 'biblioplus-desc',
+	'version' => $version,
+	'author' => array( 'Karen Eddy', 'code from the Biblio extension by Martin Jambon' ),
+	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
+);
 
 $wgHooks['ParserFirstCallInit'][] = 'BiblioPlusSetup';
 
 function BiblioPlusSetup( &$parser ) {
-    new BiblioPlus;
-    return true;
+	new BiblioPlus;
+	return true;
 }
-?>

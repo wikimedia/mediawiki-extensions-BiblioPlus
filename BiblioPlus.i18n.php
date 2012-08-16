@@ -1,11 +1,21 @@
 <?php
-/*
- * Internationalisation file for BiblioPlus extension.
+/**
+ * Internationalisation file for extension BiblioPlus.
+ *
+ * @file
+ * @ingroup Extensions
  */
  
 $messages = array();
 
+/** English
+ * @author Karen Eddy
+ */
 $messages['en'] = array(
-    'BiblioPlus-desc' => 'Automatically retrieves citations from Pubmed and the ISBN database.' 
-    );
-?>
+	'biblioplus-desc' => 'Automatically retrieves citations from PubMed and the ISBN database',
+);
+
+/** Message documentation (Message documentation)  */
+$messages['qqq'] = array(
+	'biblioplus-desc' => '{{desc}}',
+);
