@@ -12,15 +12,14 @@ $messages = array();
  * @author Karen Eddy
  */
 $messages['en'] = array(
-<<<<<<< HEAD
-	'biblioplus-desc' => 'Automatically retrieves citations from PubMed and the ISBN database',
-    'doi-tooltip' => 'View or buy article from publisher',
-    'pmid-tooltip' => 'View or buy article from publisher (if available)',
-    'isbn-tooltip' => 'Book information at isbndb.org',
-    'medline-abstracts' => 'All Medline abstracts:',
-    'pubmed-abstracts' => 'All abstracts at PubMed',
-    'hubmed-abstracts' => 'All abstracts at HubMed',
-    'vkey-title' => 'link to bibliography database'
+    'biblioplus-desc' => 'Automatically retrieves citations from PubMed and the ISBN database',
+    'biblioplus-doi-tooltip' => 'View or buy article from publisher',
+    'biblioplus-pmid-tooltip' => 'View or buy article from publisher (if available)',
+    'biblioplus-isbn-tooltip' => 'Book information at isbndb.org',
+    'biblioplus-medline-abstracts' => 'All Medline abstracts:',
+    'biblioplus-pubmed-abstracts' => 'All abstracts at PubMed',
+    'biblioplus-hubmed-abstracts' => 'All abstracts at HubMed',
+    'biblioplus-vkey-title' => 'link to bibliography database'
 );
 
 /** Message documentation (Message documentation) */

@@ -37,7 +37,7 @@
   Background:
   ==========
   
-  BiblioPlus was created to correct an error in the some PubMed references 
+  BiblioPlus was created to correct an error in some PubMed references 
   containing special characters. The original Biblio extension used the
   National Center for Biotechnology Information (NCBI)'s SOAP service, which 
   returns data in ISO 8859-1, but does not specify this encoding type in the 
