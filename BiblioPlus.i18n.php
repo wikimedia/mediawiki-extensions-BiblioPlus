@@ -19,7 +19,7 @@ $messages['en'] = array(
     'biblioplus-medline-abstracts' => 'All Medline abstracts:',
     'biblioplus-pubmed-abstracts' => 'All abstracts at PubMed',
     'biblioplus-hubmed-abstracts' => 'All abstracts at HubMed',
-    'biblioplus-vkey-title' => 'Link to bibliography database'
+    'biblioplus-vkey-title' => 'link to bibliography database'
 );
 
 /** Message documentation (Message documentation) */

@@ -7,12 +7,6 @@
  * All code without an author tag in the function documentation was taken from the Biblio extension.
  */
 class BiblioPlus {
-    /*
-     * Constructor. Sets up the Mediawiki hooks.
-     * @author Karen Eddy
-     */
-    function __construct() {
-    }
 
     /*
      * Returns an array element with index $key, or null if it does not exist.
@@ -231,14 +225,14 @@ class BiblioPlus {
 
         //set the link for the citation itself
         if ($doi != '') {
-            $title = 'title="'. wfMsg('doi-tooltip') .'"';
+            $title = 'title="'. wfMsg('biblioplus-doi-tooltip') .'"';
             $result = "<a href=\"http://dx.doi.org/$doi\" $title $style>$result</a>";
             $codes .= " " . $this -> HtmlInterLink("http://dx.doi.org/$doi", $this -> smallCaps("DOI:") . $doi, "DOI: $doi") . " |";
         } else if ($pmid != '') {
-            $title = 'title="' .wfMsg('pmid-tooltip') . '"';
+            $title = 'title="' .wfMsg('biblioplus-pmid-tooltip') . '"';
             $result = "<a href=\"http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=$pmid\" $title $style>$result</a>";
         } else if ($isbn != '') {
-            $title = 'title="' . wfMsg('isbn-tooltip') . '"';
+            $title = 'title="' . wfMsg('biblioplus-isbn-tooltip') . '"';
             $result = "<a href=\"http://isbndb.com/d/book/$isbndbref.html\" $title $style>$result</a>";
             $codes .= " " . $this -> HtmlInterLink("http://isbndb.com/d/book/$isbndbref.html", $this -> smallCaps("ISBN:") . $isbn, "ISBN:$isbn");
         }
@@ -729,7 +723,7 @@ class BiblioPlus {
         $pmids_to_fetch = array();
 
         //caching features
-        $cache = &wfGetMainCache();
+        $cache = wfGetMainCache();
         foreach ($pmids as $pmid) {
             $cache_key = wfMemcKey('Biblio', $pmid);
             if ($res = $cache -> get($cache_key)) {
@@ -809,7 +803,7 @@ class BiblioPlus {
             $header = $this -> errorbox(implode("<br>", $errors));
         }
         if (count($sorted_pmids) > 1) {
-            $footer .= wfMsg('medline-abstracts') . ' ' . $this -> HtmlInterLink($this -> PubMedUrl($sorted_pmids), $this -> smallCaps("PubMed"), wfMsg('pubmed-abstracts')) . " | " . $this -> HtmlInterLink($this -> HubMedUrl($sorted_pmids), $this -> smallCaps("HubMed"), wfMsg('hubmed-abstracts'));
+            $footer .= wfMsg('biblioplus-medline-abstracts') . ' ' . $this -> HtmlInterLink($this -> PubMedUrl($sorted_pmids), $this -> smallCaps("PubMed"), wfMsg('biblioplus-pubmed-abstracts')) . " | " . $this -> HtmlInterLink($this -> HubMedUrl($sorted_pmids), $this -> smallCaps("HubMed"), wfMsg('biblioplus-hubmed-abstracts'));
             $footer = $this -> noprint($footer);
         }
         $result = array();
@@ -821,7 +815,7 @@ class BiblioPlus {
             $vkey = "<span style=\"color:#aaa\">[$key]</span>";
             if (isset($ref['biburl'])) {
                 $biburl = htmlspecialchars($ref['biburl']);
-                $vkey = '<a href="' .$biburl .'" class="extiw" style="text-decoration:none" title="' . wfMsg('vkey-title') . '">' . $vkey . '</a>';
+                $vkey = '<a href="' .$biburl .'" class="extiw" style="text-decoration:none" title="' . wfMsg('biblioplus-vkey-title') . '">' . $vkey . '</a>';
             }
             $vkey = $this -> noprint($vkey);
             $vkey .= " $annot";
