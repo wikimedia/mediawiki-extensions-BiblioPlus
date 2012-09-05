@@ -35,10 +35,18 @@ $messages['qqq'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Metalhead64
  */
 $messages['de'] = array(
 	'biblioplus-desc' => 'Ermöglicht den automatischen Abruf von Zitaten über PubMed und die ISBN-Datenbank',
+	'biblioplus-doi-tooltip' => 'Den Artikel beim Verlag ansehen oder ihn dort kaufen.',
+	'biblioplus-pmid-tooltip' => 'Den Artikel beim Verlag ansehen oder ihn dort kaufen (sofern verfügbar).',
+	'biblioplus-isbn-tooltip' => 'Die Informationen zum Buch auf der Website isbndb.org.',
+	'biblioplus-medline-abstracts' => 'Alle Zusammenfassungen von Medline:',
+	'biblioplus-pubmed-abstracts' => 'Alle Zusammenfassungen bei PubMed',
+	'biblioplus-hubmed-abstracts' => 'Alle Zusammenfassungen bei HubMed',
+	'biblioplus-vkey-title' => 'Dies ist der Link zur bibliografischen Datenbank.',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -48,11 +56,54 @@ $messages['dsb'] = array(
 	'biblioplus-desc' => 'Wótwołujo awtomatiski citaty z PubMed a datoweje banki ISBN',
 );
 
+/** Spanish (español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'biblioplus-desc' => 'Recupera automáticamente las citas de PubMed y la base de datos ISBN',
+	'biblioplus-doi-tooltip' => 'Ver o comprar el artículo del editor',
+	'biblioplus-pmid-tooltip' => 'Ver o comprar el artículo del editor (si está disponible)',
+	'biblioplus-isbn-tooltip' => 'Información del libro en isbndb.org',
+	'biblioplus-medline-abstracts' => 'Todos los resúmenes de Medline:',
+	'biblioplus-pubmed-abstracts' => 'Todos los resúmenes de PubMed',
+	'biblioplus-hubmed-abstracts' => 'Todos los resúmenes de HubMed',
+	'biblioplus-vkey-title' => 'enlace a la base de datos bibliográfica',
+);
+
+/** French (français)
+ * @author Cquoi
+ */
+$messages['fr'] = array(
+	'biblioplus-doi-tooltip' => "Consulter ou acheter un article de l'éditeur",
+	'biblioplus-pmid-tooltip' => "Consulter ou acheter l'article de l'éditeur (si disponible)",
+	'biblioplus-isbn-tooltip' => 'Information sur le livre à isbndb.org',
+	'biblioplus-medline-abstracts' => 'Tous les résumés de Medline :',
+	'biblioplus-pubmed-abstracts' => 'Tous les résumés à PubMed',
+	'biblioplus-hubmed-abstracts' => 'All abstracts at HubMed',
+	'biblioplus-vkey-title' => 'lien vers la base de données Bibliographie',
+);
+
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'biblioplus-desc' => 'Obtén automaticamente citas de PubMed e da base de datos de ISBN',
+	'biblioplus-doi-tooltip' => 'Consultar ou mercar un artigo do editor',
+	'biblioplus-pmid-tooltip' => 'Consultar ou mercar un artigo do editor (se está dispoñible)',
+	'biblioplus-isbn-tooltip' => 'Información do libro en isbndb.org',
+	'biblioplus-medline-abstracts' => 'Todos os resumos de Medline:',
+	'biblioplus-pubmed-abstracts' => 'Todos os resumos en PubMed',
+	'biblioplus-hubmed-abstracts' => 'Todos os resumos en HubMed',
+	'biblioplus-vkey-title' => 'ligazón cara á base de datos bibliográfica',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
 	'biblioplus-desc' => 'Wotwołuje awtomatisce citaty z PubMed a datoweje banki ISBN',
+	'biblioplus-isbn-tooltip' => 'Informacije wo knize na isbndb.org',
+	'biblioplus-vkey-title' => 'wotkaz k bibliografiskej datowej bance',
 );
 
 /** Italian (italiano)
