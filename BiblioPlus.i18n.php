@@ -102,6 +102,8 @@ $messages['gl'] = array(
  */
 $messages['hsb'] = array(
 	'biblioplus-desc' => 'Wotwołuje awtomatisce citaty z PubMed a datoweje banki ISBN',
+	'biblioplus-doi-tooltip' => 'Nastawk sej pola wudawaćela wobhladać abo wot njeho kupić',
+	'biblioplus-pmid-tooltip' => 'Nastawk sej pola wudawaćela wobhladać abo wot njeho kupić (jeli k dispozicij)',
 	'biblioplus-isbn-tooltip' => 'Informacije wo knize na isbndb.org',
 	'biblioplus-vkey-title' => 'wotkaz k bibliografiskej datowej bance',
 );
