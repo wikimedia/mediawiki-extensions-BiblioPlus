@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
   BiblioPlus is a MediaWiki extension that performs automated 
   retrieval of citations from Pub Med and the ISBN database. It
