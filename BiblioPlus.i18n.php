@@ -72,8 +72,10 @@ $messages['es'] = array(
 
 /** French (français)
  * @author Cquoi
+ * @author Tititou36
  */
 $messages['fr'] = array(
+	'biblioplus-desc' => "Récupère automatiquement les références de PubMed et de la base de données de l'ISBN",
 	'biblioplus-doi-tooltip' => "Consulter ou acheter un article de l'éditeur",
 	'biblioplus-pmid-tooltip' => "Consulter ou acheter l'article de l'éditeur (si disponible)",
 	'biblioplus-isbn-tooltip' => 'Information sur le livre à isbndb.org',
