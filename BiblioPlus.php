@@ -33,6 +33,12 @@
     Alexandre Gattiker (cache for pubmed & isbndb queries)
   
   Modifications were written by Karen Eddy, and are indicated in the code comments.
+  
+  Acknowledgement:
+  ===============
+  Coding of BiblioPlus was supported by faculty funding to the laboratory of 
+  Prof. Harry Brumer at the Michael Smith Laboratories and Department of Chemistry, 
+  University of British Columbia, Vancouver, Canada.
  
   Background:
   ==========
@@ -163,7 +169,22 @@ $wgExtensionCredits['parserhook'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
 );
 
+$wgResourceModules['ext.tooltips'] = array(
+	'scripts' => array('QTips2/dist/jquery.qtip.min.js', 'tooltipConfig.js'),
+	'styles' => 'QTips2/dist/jquery.qtip.css',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'BiblioPlusTooltips',
+	'position' => 'top'
+); 
+
+$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 $wgHooks['ParserFirstCallInit'][] = 'BiblioPlusSetup';
+
+function onBeforePageDisplay(&$out)
+{
+	$out->addModules('ext.tooltips');
+	return true;
+}
 
 function BiblioPlusSetup( Parser $parser ) {
     $biblio = new BiblioPlus;
