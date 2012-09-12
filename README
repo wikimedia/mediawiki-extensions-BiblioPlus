@@ -139,3 +139,6 @@
   #key2 pmid=12345678
   #key3 isbn=0-4714-1761-0 // figure 5, page 72 is particularly interesting
   </biblio>
+  
+  Please see the BiblioPlus extension page for further information on useage.
+  www.mediawiki.org/wiki/Extension:BiblioPlus

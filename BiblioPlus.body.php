@@ -415,7 +415,17 @@ class BiblioPlus {
         return "<a href=\"$url\">$text</a>";
     }
 
-    /*
+   /*
+    * Creates an HTML URL link from the input $url and $text, containing class & id for tooltip
+    * @param $url - the URL
+    * @param $text - the link text to show on the page
+    * @return - the HTML URL link
+    */
+    function HtmlLinkTooltip($url, $text) {
+    	return "<a href=\"$url\" class=\"tooltip-from-element\" tooltip-id=\"$url\">$text</a>";
+    }
+
+	/*
      * Creates an HTML URL internal link from the input $url and $text
      * @param $url - the URL 
      * @param $text - the link text to show on the page
@@ -688,7 +698,7 @@ class BiblioPlus {
             sort($list);
             $links = array();
             foreach ($list as $ent) {
-                $link = $this -> HtmlLink("#bibkey_$ent[1]", $ent[0] + 1);
+                $link = $this -> HtmlLinkTooltip("#bibkey_$ent[1]", $ent[0] + 1);
                 $links[] = $link;
             }
             return "[" . implode(", ", $links) . "]";
@@ -824,7 +834,7 @@ class BiblioPlus {
 
         //error_reporting($initial_error_reporting);
         global $version;
-        return $header . "<!-- Produced by BiblioPlus version " . $version . " --><br>" 
+        return $header . "<!-- Produced by BiblioPlus version " . $version . " -->" 
             . '<ol>' . implode("", $result) . '</ol>' . $footer;
     }
  
