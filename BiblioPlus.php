@@ -169,22 +169,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
 );
 
-$wgResourceModules['ext.tooltips'] = array(
-	'scripts' => array('QTips2/dist/jquery.qtip.min.js', 'tooltipConfig.js'),
-	'styles' => 'QTips2/dist/jquery.qtip.css',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'BiblioPlusTooltips',
-	'position' => 'top'
-); 
-
-$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 $wgHooks['ParserFirstCallInit'][] = 'BiblioPlusSetup';
-
-function onBeforePageDisplay(&$out)
-{
-	$out->addModules('ext.tooltips');
-	return true;
-}
 
 function BiblioPlusSetup( Parser $parser ) {
     $biblio = new BiblioPlus;
