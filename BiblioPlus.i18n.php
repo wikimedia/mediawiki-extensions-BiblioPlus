@@ -107,6 +107,9 @@ $messages['hsb'] = array(
 	'biblioplus-doi-tooltip' => 'Nastawk sej pola wudawaćela wobhladać abo wot njeho kupić',
 	'biblioplus-pmid-tooltip' => 'Nastawk sej pola wudawaćela wobhladać abo wot njeho kupić (jeli k dispozicij)',
 	'biblioplus-isbn-tooltip' => 'Informacije wo knize na isbndb.org',
+	'biblioplus-medline-abstracts' => 'Wšě zarysy z Medline:',
+	'biblioplus-pubmed-abstracts' => 'Wšě zarysy z PubMed',
+	'biblioplus-hubmed-abstracts' => 'Wšě zarysy z HubMed',
 	'biblioplus-vkey-title' => 'wotkaz k bibliografiskej datowej bance',
 );
 
