@@ -127,6 +127,20 @@ $messages['ja'] = array(
 	'biblioplus-desc' => 'PubMed および ISBN データベースから引用を自動的に取得する',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'biblioplus-desc' => 'Hollt automattesch Zitaate vun dä PubMed Daatebangk unuß dä ISBN Daatebangk.',
+	'biblioplus-doi-tooltip' => 'Lißß udder kouf dä Atikkel beim Verlaach',
+	'biblioplus-pmid-tooltip' => 'Lißß udder kouf dä Atikkel beim Verlaach wann müjjelesch',
+	'biblioplus-isbn-tooltip' => 'Aanjaabe zom Booch op isbndb.org',
+	'biblioplus-medline-abstracts' => 'Alle Zosammefaßonge op <i lang="en">Medline</i>:',
+	'biblioplus-pubmed-abstracts' => 'Alle Zosammefaßonge op <i lang="en">PubMed</i>',
+	'biblioplus-hubmed-abstracts' => 'Alle Zosammefaßonge op <i lang="en">HubMed</i>',
+	'biblioplus-vkey-title' => 'Lengk op en biblijojraafesche Daatebangk',
+);
+
 /** Maltese (Malti)
  * @author Chrisportelli
  */
