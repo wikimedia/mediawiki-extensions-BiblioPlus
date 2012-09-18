@@ -141,11 +141,26 @@ $messages['ksh'] = array(
 	'biblioplus-vkey-title' => 'Lengk op en biblijojraafesche Daatebangk',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'biblioplus-isbn-tooltip' => "Informatioun iwwert d'Buch op isbndb.org",
+	'biblioplus-vkey-title' => "Link op d'Datebank vun de Bibliografien",
+);
+
 /** Maltese (Malti)
  * @author Chrisportelli
  */
 $messages['mt'] = array(
 	'biblioplus-desc' => 'Tirkupra awtomatikament ċitazzjoni minn PubMed u mid-databażi ISBN',
+);
+
+/** Dutch (Nederlands)
+ * @author SPQRobin
+ */
+$messages['nl'] = array(
+	'biblioplus-isbn-tooltip' => 'Informatie over het boek op isbndb.org',
 );
 
 /** Tagalog (Tagalog)
