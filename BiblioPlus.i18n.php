@@ -149,6 +149,20 @@ $messages['lb'] = array(
 	'biblioplus-vkey-title' => "Link op d'Datebank vun de Bibliografien",
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'biblioplus-desc' => 'Menerima petikan secara automatik dari PubMed dan pangkalan data ISBN',
+	'biblioplus-doi-tooltip' => 'Baca atau beli rencana dari penerbit',
+	'biblioplus-pmid-tooltip' => 'Baca atau beli rencana dari penerbit (jika ada)',
+	'biblioplus-isbn-tooltip' => 'Keterangan buku di isbndb.org',
+	'biblioplus-medline-abstracts' => 'Semua abstrak Medline:',
+	'biblioplus-pubmed-abstracts' => 'Semua abstrak di PubMed',
+	'biblioplus-hubmed-abstracts' => 'Semua abstrak di HubMed',
+	'biblioplus-vkey-title' => 'pautan ke pangkalan data bibliografi',
+);
+
 /** Maltese (Malti)
  * @author Chrisportelli
  */
