@@ -146,6 +146,9 @@ $messages['ksh'] = array(
  */
 $messages['lb'] = array(
 	'biblioplus-isbn-tooltip' => "Informatioun iwwert d'Buch op isbndb.org",
+	'biblioplus-medline-abstracts' => 'All Resuméë vu Medline:',
+	'biblioplus-pubmed-abstracts' => 'All Resuméë vu PubMed',
+	'biblioplus-hubmed-abstracts' => 'All Resuméë vu HubMed',
 	'biblioplus-vkey-title' => "Link op d'Datebank vun de Bibliografien",
 );
 
@@ -175,6 +178,20 @@ $messages['mt'] = array(
  */
 $messages['nl'] = array(
 	'biblioplus-isbn-tooltip' => 'Informatie over het boek op isbndb.org',
+);
+
+/** Polish (polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'biblioplus-desc' => 'Automatycznie pobiera cytaty z baz danych PubMed i ISBN',
+	'biblioplus-doi-tooltip' => 'Przejrzyj lub kup artykuł od wydawcy',
+	'biblioplus-pmid-tooltip' => 'Przejrzyj lub kup artykuł od wydawcy (jeśli jest dostępny)',
+	'biblioplus-isbn-tooltip' => 'Informacje o książce w isbndb.org',
+	'biblioplus-medline-abstracts' => 'Wszystkie streszczenia z Medline:',
+	'biblioplus-pubmed-abstracts' => 'Wszystkie streszczenia z PubMed',
+	'biblioplus-hubmed-abstracts' => 'Wszystkie streszczenia z HubMed',
+	'biblioplus-vkey-title' => 'łącze do bazy danych bibliografii',
 );
 
 /** Tagalog (Tagalog)
