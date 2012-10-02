@@ -25,13 +25,13 @@ $messages['en'] = array(
 /** Message documentation (Message documentation) */
 $messages['qqq'] = array(
 	'biblioplus-desc' => '{{desc}}',
-	'biblioplus-doi-tooltip' =>  'Message in the tooltip when hovering over a reference in the References section.',
+	'biblioplus-doi-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-pmid-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-isbn-tooltip' => 'Message in the tooltip when hovering over an ISBN link in the References section.',
 	'biblioplus-medline-abstracts' => 'Text that appears after the list of references. It is followed by links to PubMed and HubMed. Do not translate Medline.',
 	'biblioplus-pubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
 	'biblioplus-hubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
-	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.'
+	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
 );
 
 /** German (Deutsch)
@@ -125,6 +125,9 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'biblioplus-desc' => 'PubMed および ISBN データベースから引用を自動的に取得する',
+	'biblioplus-doi-tooltip' => '発行者の記事を閲覧または購入',
+	'biblioplus-pmid-tooltip' => '発行者の記事を閲覧または購入 (利用できる場合)',
+	'biblioplus-isbn-tooltip' => 'isbndb.org の書籍情報',
 );
 
 /** Colognian (Ripoarisch)
@@ -150,6 +153,20 @@ $messages['lb'] = array(
 	'biblioplus-pubmed-abstracts' => 'All Resuméë vu PubMed',
 	'biblioplus-hubmed-abstracts' => 'All Resuméë vu HubMed',
 	'biblioplus-vkey-title' => "Link op d'Datebank vun de Bibliografien",
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'biblioplus-desc' => 'Автоматски се оповикува на наводи од PubMed и базата на ISBN',
+	'biblioplus-doi-tooltip' => 'Прочитајте или купете ја статијата од издавачот',
+	'biblioplus-pmid-tooltip' => 'Прочитајте или купете ја статијата од издавачот (ако е достапна)',
+	'biblioplus-isbn-tooltip' => 'Информации за книгата на isbndb.org',
+	'biblioplus-medline-abstracts' => 'Сите извадоци од Medline:',
+	'biblioplus-pubmed-abstracts' => 'Сите извадоци од PubMed',
+	'biblioplus-hubmed-abstracts' => 'Сите извадоци од HubMed',
+	'biblioplus-vkey-title' => 'Врска до библиографската база',
 );
 
 /** Malay (Bahasa Melayu)
@@ -199,5 +216,12 @@ $messages['pl'] = array(
  */
 $messages['tl'] = array(
 	'biblioplus-desc' => 'Kusang kumukuhang muli ng mga pagbanggit magmula sa kalipunan ng dato ng PubMed at ng ISBN',
+	'biblioplus-doi-tooltip' => 'Tingnan o bilhin ang artikulo mula sa tagapaglathala',
+	'biblioplus-pmid-tooltip' => 'Tingnan o bilhin ang artikulo mula sa tagapaglathala (kung makukuha)',
+	'biblioplus-isbn-tooltip' => 'Kabatiran sa aklat na nandoon sa isbndb.org',
+	'biblioplus-medline-abstracts' => 'Lahat ng mga kabuuran ng Medline:',
+	'biblioplus-pubmed-abstracts' => 'Lahat ng mga kabuuran na nasa PubMed',
+	'biblioplus-hubmed-abstracts' => 'Lahat ng mga kabuuran na nasa HubMed',
+	'biblioplus-vkey-title' => 'Kawing sa kalipunan ng dato ng talaaklatan',
 );
 
