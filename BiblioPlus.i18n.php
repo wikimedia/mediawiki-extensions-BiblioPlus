@@ -49,6 +49,15 @@ $messages['de'] = array(
 	'biblioplus-vkey-title' => 'Dies ist der Link zur bibliografischen Datenbank.',
 );
 
+/** Zazaki (Zazaki)
+ * @author Erdemaslancan
+ */
+$messages['diq'] = array(
+	'biblioplus-medline-abstracts' => "Xulasaya Medline'i hemi:",
+	'biblioplus-pubmed-abstracts' => 'Xulasay PubMed hemi',
+	'biblioplus-hubmed-abstracts' => 'Xulasay HubMed hemi',
+);
+
 /** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
