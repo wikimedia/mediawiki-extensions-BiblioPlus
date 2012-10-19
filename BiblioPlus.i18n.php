@@ -51,11 +51,12 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Mirzali
  */
 $messages['diq'] = array(
-	'biblioplus-medline-abstracts' => "Xulasaya Medline'i hemi:",
-	'biblioplus-pubmed-abstracts' => 'Xulasay PubMed hemi',
-	'biblioplus-hubmed-abstracts' => 'Xulasay HubMed hemi',
+	'biblioplus-medline-abstracts' => 'Heme xulasaya Medliney:',
+	'biblioplus-pubmed-abstracts' => 'PubMed de heme xulasey',
+	'biblioplus-hubmed-abstracts' => 'HubMed de heme xulasey',
 );
 
 /** Lower Sorbian (dolnoserbski)
