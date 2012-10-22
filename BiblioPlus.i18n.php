@@ -22,7 +22,8 @@ $messages['en'] = array(
 	'biblioplus-vkey-title' => 'link to bibliography database'
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ */
 $messages['qqq'] = array(
 	'biblioplus-desc' => '{{desc}}',
 	'biblioplus-doi-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
@@ -234,4 +235,3 @@ $messages['tl'] = array(
 	'biblioplus-hubmed-abstracts' => 'Lahat ng mga kabuuran na nasa HubMed',
 	'biblioplus-vkey-title' => 'Kawing sa kalipunan ng dato ng talaaklatan',
 );
-
