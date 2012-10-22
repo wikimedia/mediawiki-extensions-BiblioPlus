@@ -203,8 +203,11 @@ $messages['mt'] = array(
 
 /** Dutch (Nederlands)
  * @author SPQRobin
+ * @author Siebrand
  */
 $messages['nl'] = array(
+	'biblioplus-doi-tooltip' => 'Artikel van uitgever bekijken of kopen',
+	'biblioplus-pmid-tooltip' => 'Artikel van uitgever bekijken of kopen (als beschikbaar)',
 	'biblioplus-isbn-tooltip' => 'Informatie over het boek op isbndb.org',
 );
 
