@@ -59,9 +59,9 @@ class BiblioPlus {
     }
 
     /* Returns the source code of a local wiki page
-     * @param - $title - the title of the wiki page 
+     * @param - $title - the title of the wiki page
      * @return - the source code of the input page
-     */    
+     */
     function fetch_page($title) {
         $rev = Revision::newFromTitle($title);
         return $rev -> getText();
@@ -88,7 +88,7 @@ class BiblioPlus {
         } else
             return -1;
     }
-   
+
     /*
      * Adds a period to the end of the input text, if there isn't one already.
      * @param $s - the input text
@@ -97,7 +97,7 @@ class BiblioPlus {
     function period($s) {
         return $s == '' ? '' : (substr($s, strlen($s) - 1) == '.' ? $s : "$s.");
     }
-    
+
     /*
      * Adds HTML tags to italicize the input text.
      * @param $s - the input text
@@ -109,9 +109,9 @@ class BiblioPlus {
 
     /******************
      * PUB MED QUERIES
-     ****************** 
+     ******************
      */
-     
+
     /* Gets full citations for a list of PubMed pmids by calling the NCBI's eUtilities service.
      * @param $pmids - an array of PubMed pmids to query
      * @return - a string containing the XML file returned by the eUtilities service, or an empty string
@@ -199,12 +199,12 @@ class BiblioPlus {
         }
         return $formattedRefs;
     }
-     
+
      
     /* Formatting of a PubMed or ISBN DB citation
-     * @param $authors - a string containing the authors of the citation 
-     * @param $title - a string of the title of the citation 
-     * @param $origin - a string of the source of the citation 
+     * @param $authors - a string containing the authors of the citation
+     * @param $title - a string of the title of the citation
+     * @param $origin - a string of the source of the citation
      * @param $pmid - the PubMed ID of the citation, if it is one
      * @param $doi - the doi of the citation, if it has one
      * @param $isbn - the ISBN of the citation, if it is one
@@ -285,13 +285,13 @@ class BiblioPlus {
 
     /******************
      * ISBN DB QUERIES
-     ****************** 
+     ******************
      */
-     
+
     /*
      * Formats the input author names for output to the citation list.
      * @param $text - string containing the author names
-     * @return - the formatted author names 
+     * @return - the formatted author names
      */
     function FormatAuthors($text) {
         $patterns = array('/\s+([:,;.!?])/', '/c(\d+)/', '/[:,;!?]\s*$/m');
@@ -400,14 +400,14 @@ class BiblioPlus {
         return $result;
     }
 
-    /******************************* 
+    /*******************************
      * General formatting functions
      ******************************* 
      */
-    
+
     /*
      * Creates an HTML URL link from the input $url and $text
-     * @param $url - the URL 
+     * @param $url - the URL
      * @param $text - the link text to show on the page
      * @return - the HTML URL link
      */
@@ -422,33 +422,33 @@ class BiblioPlus {
     * @return - the HTML URL link
     */
     function HtmlLinkTooltip($url, $text) {
-    	return "<a href=\"$url\" class=\"tooltip-from-element\" tooltip-id=\"$url\">$text</a>";
+    	return "<a href=\"$url\" class=\"tooltip-from-element\">$text</a>";
     }
 
 	/*
      * Creates an HTML URL internal link from the input $url and $text
-     * @param $url - the URL 
+     * @param $url - the URL
      * @param $text - the link text to show on the page
      * @param $title - the contents of the tooltip that shows on hover over the link
      * @return - the HTML URL internal link
      */
     function HtmlInterLink($url, $text, $title) {
-        return "<a href=\"$url\" class=extiw title=\"$title\"" . "rel=\"nofollow\">$text</a>";
+        return "<a href=\"$url\" class=extiw title=\"$title\"" . " rel=\"nofollow\">$text</a>";
     }
 
-        /*
+    /*
      * Creates an HTML URL external link from the input $url and $text
-     * @param $url - the URL 
+     * @param $url - the URL
      * @param $text - the link text to show on the page
      * @param $title - the contents of the tooltip that shows on hover over the link
      * @return - the HTML URL external link
      */
      function HtmlExtLink($url, $text, $title) {
-        return "<a href=\"$url\" class=\"external\" title=\"$title\"" . "rel=\"nofollow\">$text</a>";
+        return "<a href=\"$url\" class=\"external\" title=\"$title\"" . " rel=\"nofollow\">$text</a>";
     }
 
     /*
-     * Returns the input $text with CSS formatting for small caps.
+     * Returns the input $text with CSS formatting for small caps
      * @param $text - the text to format
      * @return - the text, formatted for small caps
      */
@@ -616,12 +616,11 @@ class BiblioPlus {
         return $result;
     }
 
-
     /*******************************
      * MEDIAWIKI CALLBACKS FOR TAGS
      *******************************
-     */ 
-     
+     */
+
     /* Conversion of the contents of <cite> tags
      * @param string $input - text inside <cite> tag
      * @param array $params - arguments inside <cite> tag
@@ -631,7 +630,7 @@ class BiblioPlus {
     function Biblio_render_cite($input, $params, $parser = null) {
         return $this->render_cite($input, $this->Biblio_get_parser_data($parser), true);
     }
-    
+
     /* Conversion of the contents of <nocite> tags
      * @param string $input - text inside <cite> tag
      * @param array $params - arguments inside <cite> tag
@@ -641,25 +640,25 @@ class BiblioPlus {
      function Biblio_render_nocite($input, $params, $parser = null) {
           return $this->render_nocite($input, $this->Biblio_get_parser_data($parser), false);
     }
-    
+
     /* Conversion of the contents of <biblio> tags
      * @param string $input - text inside <cite> tag
      * @param array $params - arguments inside <cite> tag
      * @param Parser $parser - parser
      * @return string
-     */    
+     */
      function Biblio_render_biblio($input, $params, $parser = null) {
         global $BiblioForce;
         $force = isset($params['force']) ? ($params['force'] == "true") : $BiblioForce;
         return $this->render_biblio($input, $this->Biblio_get_parser_data($parser), $force);
     }
-     
+
     /****************************
      * RENDERING OF TAG CONTENTS
      ****************************
      */
-     
-    /* 
+
+    /*
      * Gets the data from the parser, used in set up
      * @param $parser - the parser
      * @return - an array of the data extracted from the parser
@@ -685,7 +684,7 @@ class BiblioPlus {
      * @param $input - text inside <cite> tags
      * @param $pdata - parser data
      * @param $render - boolean - if true, citation will be created and returned; if false, returns empty string
-     * @return - string with numbered citation(s) for insertion into the text     
+     * @return - string with numbered citation(s) for insertion into the text
      */
     function render_cite($input, $pdata, $render = true) {
         $keys = preg_split('/[^-+A-Za-z_0-9]+/', $input, -1, PREG_SPLIT_NO_EMPTY);
@@ -718,7 +717,7 @@ class BiblioPlus {
     /* Conversion of the contents of <biblio> tags
      * @param $input - text inside <biblio> tags
      * @param $pdata - parser data
-     * @param $force - boolean - if true, references will be listed even if not cited in text; 
+     * @param $force - boolean - if true, references will be listed even if not cited in text;
      *  if false, references will only be listed if cited in text
      * @return - array of formatted references
      */
@@ -761,12 +760,12 @@ class BiblioPlus {
             $cache_key = wfMemcKey('Biblio' , $pmid);
             $cache -> set($cache_key, $value, CACHE_TTL);
         }
-        
+
         //retrieve data for ISBNs
         $isbnentries = $this -> IsbnDbQuery($isbns);
         $refs = array();
         $errors = array();
-        
+
         //go through all entries and extract data to format reference
         foreach ($entries as $ref) {
             $key = $this -> get($ref, 'key');
@@ -837,12 +836,12 @@ class BiblioPlus {
         return $header . "<!-- Produced by BiblioPlus version " . $version . " -->" 
             . '<ol>' . implode("", $result) . '</ol>' . $footer;
     }
- 
-     /***********************
+
+     /**********************
      *  Debugging functions
      ***********************
      */
-    
+
     /*
      * Wraps a string in an HTML comment tag and prints it out.
      */
@@ -858,5 +857,5 @@ class BiblioPlus {
         print_r($x);
         echo "\n-->\n";
     }
-     
+
 } //end of BiblioPlus class definition

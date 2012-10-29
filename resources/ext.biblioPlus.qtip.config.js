@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 	$('.tooltip-from-element').qtip({
 		content: {
 			text: function(api) {
-				var key =  $(this).attr('tooltip-id');		
+				var key =  $(this).attr('href');	
 				key = key.substring(1); //strip the # sign from the beginning
 				return document.getElementById(key).innerHTML;
 			}
