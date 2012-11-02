@@ -125,10 +125,18 @@ $messages['hsb'] = array(
 );
 
 /** Italian (italiano)
+ * @author Beta16
  * @author Darth Kule
  */
 $messages['it'] = array(
 	'biblioplus-desc' => 'Recupera automaticamente citazioni da PubMed e dal database ISBN',
+	'biblioplus-doi-tooltip' => "Vedi o acquista l'articolo dall'editore",
+	'biblioplus-pmid-tooltip' => "Vedi o acquista l'articolo dall'editore (se disponibile)",
+	'biblioplus-isbn-tooltip' => 'Informazioni sul libro da isbndb.org',
+	'biblioplus-medline-abstracts' => 'Tutti gli abstract di Medline:',
+	'biblioplus-pubmed-abstracts' => 'Tutti gli abstract su PubMed',
+	'biblioplus-hubmed-abstracts' => 'Tutti gli abstract su HubMed',
+	'biblioplus-vkey-title' => 'collegamento al database bibliografico',
 );
 
 /** Japanese (日本語)
