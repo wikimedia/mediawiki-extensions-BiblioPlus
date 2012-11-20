@@ -214,9 +214,14 @@ $messages['mt'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
+	'biblioplus-desc' => 'Haalt automatisch citaten op van PubMed en de ISBN-database',
 	'biblioplus-doi-tooltip' => 'Artikel van uitgever bekijken of kopen',
 	'biblioplus-pmid-tooltip' => 'Artikel van uitgever bekijken of kopen (als beschikbaar)',
 	'biblioplus-isbn-tooltip' => 'Informatie over het boek op isbndb.org',
+	'biblioplus-medline-abstracts' => 'Alle samenvattingen van Medline:',
+	'biblioplus-pubmed-abstracts' => 'Alle samenvattingen van PubMed',
+	'biblioplus-hubmed-abstracts' => 'Alle samenvattingen van HubMed',
+	'biblioplus-vkey-title' => 'verwijzen naar bibliografiedatabase',
 );
 
 /** Polish (polski)
