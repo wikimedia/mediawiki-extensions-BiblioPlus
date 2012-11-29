@@ -81,6 +81,13 @@ $messages['es'] = array(
 	'biblioplus-vkey-title' => 'enlace a la base de datos bibliográfica',
 );
 
+/** Finnish (suomi)
+ * @author Nedergard
+ */
+$messages['fi'] = array(
+	'biblioplus-vkey-title' => 'linkki bibliografiseen tietokantaan',
+);
+
 /** French (français)
  * @author Cquoi
  * @author Tititou36
