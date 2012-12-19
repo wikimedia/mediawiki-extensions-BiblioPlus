@@ -23,9 +23,10 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'biblioplus-desc' => '{{desc}}',
+	'biblioplus-desc' => '{{desc|name=Biblio Plus|url=http://www.mediawiki.org/wiki/Extension:BiblioPlus}}',
 	'biblioplus-doi-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-pmid-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-isbn-tooltip' => 'Message in the tooltip when hovering over an ISBN link in the References section.',
@@ -243,6 +244,15 @@ $messages['pl'] = array(
 	'biblioplus-pubmed-abstracts' => 'Wszystkie streszczenia z PubMed',
 	'biblioplus-hubmed-abstracts' => 'Wszystkie streszczenia z HubMed',
 	'biblioplus-vkey-title' => 'łącze do bazy danych bibliografii',
+);
+
+/** Swedish (svenska)
+ * @author WikiPhoenix
+ */
+$messages['sv'] = array(
+	'biblioplus-doi-tooltip' => 'Visa eller köpa artikel från utgivaren',
+	'biblioplus-pmid-tooltip' => 'Visa eller köpa artikel från utgivaren (om den är tillgänglig)',
+	'biblioplus-isbn-tooltip' => 'Bokinformation på isbndb.org',
 );
 
 /** Tagalog (Tagalog)
