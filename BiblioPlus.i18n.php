@@ -36,6 +36,14 @@ $messages['qqq'] = array(
 	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
 );
 
+/** Czech (česky)
+ * @author Vks
+ */
+$messages['cs'] = array(
+	'biblioplus-isbn-tooltip' => 'Informace o knize na isbndb.org',
+	'biblioplus-pubmed-abstracts' => 'Všechny abstrakty na PubMed',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Metalhead64
@@ -130,6 +138,19 @@ $messages['hsb'] = array(
 	'biblioplus-pubmed-abstracts' => 'Wšě zarysy z PubMed',
 	'biblioplus-hubmed-abstracts' => 'Wšě zarysy z HubMed',
 	'biblioplus-vkey-title' => 'wotkaz k bibliografiskej datowej bance',
+);
+
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'biblioplus-doi-tooltip' => 'Lihat atau beli artikel dari penerbit',
+	'biblioplus-pmid-tooltip' => 'Lihat atau beli artikel dari penerbit (jika tersedia)',
+	'biblioplus-isbn-tooltip' => 'Informasi buku di isbndb.org',
+	'biblioplus-medline-abstracts' => 'Semua abstrak Medline:',
+	'biblioplus-pubmed-abstracts' => 'Semua abstrak di PubMed',
+	'biblioplus-hubmed-abstracts' => 'Semua abstrak di HubMed',
+	'biblioplus-vkey-title' => 'tautan ke basis data pustaka',
 );
 
 /** Italian (italiano)
