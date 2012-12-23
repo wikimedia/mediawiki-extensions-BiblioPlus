@@ -36,6 +36,15 @@ $messages['qqq'] = array(
 	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
 );
 
+/** Catalan (català)
+ * @author Arnaugir
+ */
+$messages['ca'] = array(
+	'biblioplus-pubmed-abstracts' => 'Tots els resums a PubMed',
+	'biblioplus-hubmed-abstracts' => 'Tots els resums a HubMed',
+	'biblioplus-vkey-title' => 'enllaç a la base de dades de bibliografia',
+);
+
 /** Czech (česky)
  * @author Vks
  */
