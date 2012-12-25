@@ -276,6 +276,44 @@ $messages['pl'] = array(
 	'biblioplus-vkey-title' => 'łącze do bazy danych bibliografii',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'biblioplus-desc' => 'A treuva automaticament citassion da PubMed e dal database ISBN',
+	'biblioplus-doi-tooltip' => 'Varda o cata artìcol dal publicista',
+	'biblioplus-pmid-tooltip' => "Varda o cata l'artìcol dal publicista (se disponìbil)",
+	'biblioplus-isbn-tooltip' => 'Anformassion dël lìber a isbndb.org',
+	'biblioplus-medline-abstracts' => 'Tùit ij resumé ëd Medline:',
+	'biblioplus-pubmed-abstracts' => 'Tùit ij resumé a PubMed',
+	'biblioplus-hubmed-abstracts' => 'Tùit ij resumé a HubMed',
+	'biblioplus-vkey-title' => 'Colegament al database bibliogràfich',
+);
+
+/** Russian (русский)
+ * @author Kaganer
+ */
+$messages['ru'] = array(
+	'biblioplus-desc' => 'Автоматически извлекает цитаты из PubMed и базы данных ISBN',
+	'biblioplus-doi-tooltip' => 'Просмотр или купить статью у издателя',
+	'biblioplus-pmid-tooltip' => 'Просмотреть или купить статью у издателя (если доступно)',
+	'biblioplus-isbn-tooltip' => 'Информация о книге на isbndb.org',
+	'biblioplus-medline-abstracts' => 'Все тезисы из Medline:',
+	'biblioplus-pubmed-abstracts' => 'Все тезисы в PubMed',
+	'biblioplus-hubmed-abstracts' => 'Все тезисы в HubMed',
+	'biblioplus-vkey-title' => 'ссылка на библиографическую базу данных',
+);
+
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'biblioplus-medline-abstracts' => 'සියලුම මෙඩ්ලයින් සාරාංශ:',
+	'biblioplus-pubmed-abstracts' => 'PubMed හී සියලුම සාරාංශ',
+	'biblioplus-hubmed-abstracts' => 'HubMed හී සියලුම සාරාංශ',
+	'biblioplus-vkey-title' => 'ග්‍රන්ථනාමාවලි දත්ත සංචිතය වෙත සබැඳිය',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
@@ -297,4 +335,25 @@ $messages['tl'] = array(
 	'biblioplus-pubmed-abstracts' => 'Lahat ng mga kabuuran na nasa PubMed',
 	'biblioplus-hubmed-abstracts' => 'Lahat ng mga kabuuran na nasa HubMed',
 	'biblioplus-vkey-title' => 'Kawing sa kalipunan ng dato ng talaaklatan',
+);
+
+/** Ukrainian (українська)
+ * @author Ата
+ */
+$messages['uk'] = array(
+	'biblioplus-desc' => 'Автоматично отримує цитати з PubMed та бази даних ISBN',
+	'biblioplus-doi-tooltip' => 'Переглянути або купити статтю у видавця',
+	'biblioplus-pmid-tooltip' => 'Переглянути або купити статтю у видавця (якщо можливо)',
+	'biblioplus-isbn-tooltip' => 'Інформація про книгу на isbndb.org',
+	'biblioplus-medline-abstracts' => 'Усі тези з Medline:',
+	'biblioplus-pubmed-abstracts' => 'Усі тези в PubMed',
+	'biblioplus-hubmed-abstracts' => 'Усі тези в HubMed',
+	'biblioplus-vkey-title' => 'посилання на бібліографічну базу даних',
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Hzy980512
+ */
+$messages['zh-hans'] = array(
+	'biblioplus-isbn-tooltip' => 'isbndb.org 上的书籍信息',
 );
