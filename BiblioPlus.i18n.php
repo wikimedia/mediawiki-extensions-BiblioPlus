@@ -101,8 +101,16 @@ $messages['es'] = array(
 
 /** Finnish (suomi)
  * @author Nedergard
+ * @author VezonThunder
  */
 $messages['fi'] = array(
+	'biblioplus-desc' => 'Hakee lähteet automaattisesti PubMedistä ja ISBN-tietokannasta',
+	'biblioplus-doi-tooltip' => 'Lue tai osta artikkeli julkaisijalta',
+	'biblioplus-pmid-tooltip' => 'Lue tai osta artikkeli julkaisijalta (jos saatavilla)',
+	'biblioplus-isbn-tooltip' => 'Kirjan tiedot osoitteessa isbndb.org',
+	'biblioplus-medline-abstracts' => 'Kaikki Medlinen tiivistelmät:',
+	'biblioplus-pubmed-abstracts' => 'Kaikki tiivistelmät PubMedissä',
+	'biblioplus-hubmed-abstracts' => 'Kaikki tiivistelmät HubMedissä',
 	'biblioplus-vkey-title' => 'linkki bibliografiseen tietokantaan',
 );
 
@@ -308,6 +316,7 @@ $messages['ru'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'biblioplus-isbn-tooltip' => 'isbndb.org හී පොත් තොරතුරු',
 	'biblioplus-medline-abstracts' => 'සියලුම මෙඩ්ලයින් සාරාංශ:',
 	'biblioplus-pubmed-abstracts' => 'PubMed හී සියලුම සාරාංශ',
 	'biblioplus-hubmed-abstracts' => 'HubMed හී සියලුම සාරාංශ',
