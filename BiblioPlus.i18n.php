@@ -36,6 +36,15 @@ $messages['qqq'] = array(
 	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
 );
 
+/** Bashkir (башҡортса)
+ * @author Sagan
+ */
+$messages['ba'] = array(
+	'biblioplus-doi-tooltip' => 'Мәҡәләне ҡарарға йәки нәшерсенән һатып алырға.',
+	'biblioplus-pmid-tooltip' => 'Мәҡәләне ҡарарға йәки нәшерсенән һатып алырға (мөмкин булһа).',
+	'biblioplus-isbn-tooltip' => 'Китап тураһында мәғлүмәт isbndb.org',
+);
+
 /** Catalan (català)
  * @author Arnaugir
  */
@@ -268,6 +277,14 @@ $messages['nl'] = array(
 	'biblioplus-pubmed-abstracts' => 'Alle samenvattingen van PubMed',
 	'biblioplus-hubmed-abstracts' => 'Alle samenvattingen van HubMed',
 	'biblioplus-vkey-title' => 'verwijzen naar bibliografiedatabase',
+);
+
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Jnanaranjan Sahu
+ */
+$messages['or'] = array(
+	'biblioplus-doi-tooltip' => 'ଏହି ପ୍ରକାଶକଙ୍କ ଲେଖାଗୁଡ଼ିକ ଦେଖିବେ କିମ୍ବା କିଣିବେ',
+	'biblioplus-pmid-tooltip' => 'ପ୍ରକାଶକଙ୍କ ଲେଖାଗୁଡିକୁ ଦେଖିବେ କିମ୍ବା କିଣିବେ (ଯଦି ଉପଲବ୍ଧ)',
 );
 
 /** Polish (polski)
