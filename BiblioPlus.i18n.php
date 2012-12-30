@@ -138,6 +138,16 @@ $messages['fr'] = array(
 	'biblioplus-vkey-title' => 'lien vers la base de données Bibliographie',
 );
 
+/** Franco-Provençal (arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'biblioplus-medline-abstracts' => 'Tôs los rèsumâs de Medline :',
+	'biblioplus-pubmed-abstracts' => 'Tôs los rèsumâs a PubMed',
+	'biblioplus-hubmed-abstracts' => 'Tôs los rèsumâs a HubMed',
+	'biblioplus-vkey-title' => 'lim de vers la bâsa de donâs bibliografica',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
@@ -333,6 +343,7 @@ $messages['ru'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'biblioplus-doi-tooltip' => 'ප්‍රකාශකගෙන් ලිපිය නරඹන්න හෝ මිලදී ගන්න',
 	'biblioplus-isbn-tooltip' => 'isbndb.org හී පොත් තොරතුරු',
 	'biblioplus-medline-abstracts' => 'සියලුම මෙඩ්ලයින් සාරාංශ:',
 	'biblioplus-pubmed-abstracts' => 'PubMed හී සියලුම සාරාංශ',
