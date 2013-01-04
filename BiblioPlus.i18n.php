@@ -312,17 +312,18 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'biblioplus-desc' => 'A treuva automaticament citassion da PubMed e dal database ISBN',
-	'biblioplus-doi-tooltip' => 'Varda o cata artìcol dal publicista',
-	'biblioplus-pmid-tooltip' => "Varda o cata l'artìcol dal publicista (se disponìbil)",
-	'biblioplus-isbn-tooltip' => 'Anformassion dël lìber a isbndb.org',
+	'biblioplus-desc' => "A treuva automaticament le corëspondense da PubMed e da la base ëd dàit d'ISBN",
+	'biblioplus-doi-tooltip' => "Consulté o caté n'artìcol da l'editor",
+	'biblioplus-pmid-tooltip' => "Consulté o caté l'artìcol da l'editor (se disponìbil)",
+	'biblioplus-isbn-tooltip' => 'Anformassion an sël lìber a isbndb.org',
 	'biblioplus-medline-abstracts' => 'Tùit ij resumé ëd Medline:',
 	'biblioplus-pubmed-abstracts' => 'Tùit ij resumé a PubMed',
 	'biblioplus-hubmed-abstracts' => 'Tùit ij resumé a HubMed',
-	'biblioplus-vkey-title' => 'Colegament al database bibliogràfich',
+	'biblioplus-vkey-title' => 'liura a la base ëd dàit bibliogràfica',
 );
 
 /** Russian (русский)
