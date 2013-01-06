@@ -326,6 +326,15 @@ $messages['pms'] = array(
 	'biblioplus-vkey-title' => 'liura a la base ëd dàit bibliogràfica',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'biblioplus-pubmed-abstracts' => "Tutte l'astraziune a PubMed",
+	'biblioplus-hubmed-abstracts' => "Tutte l'astraziune a HubMed",
+	'biblioplus-vkey-title' => "collegamende a l'archivije d'a bibbliografije",
+);
+
 /** Russian (русский)
  * @author Kaganer
  */
