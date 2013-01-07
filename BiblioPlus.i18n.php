@@ -214,6 +214,21 @@ $messages['ja'] = array(
 	'biblioplus-isbn-tooltip' => 'isbndb.org の書籍情報',
 );
 
+/** Korean (한국어)
+ * @author LFM
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'biblioplus-desc' => 'PubMed와 ISBN 데이터베이스에서 인용을 자동으로 검색합니다',
+	'biblioplus-doi-tooltip' => '발행자의 문서를 보거나 구입',
+	'biblioplus-pmid-tooltip' => '(가능한 경우) 발행자의 문서를 보거나 구입',
+	'biblioplus-isbn-tooltip' => 'isbndb.org의 서지 정보',
+	'biblioplus-medline-abstracts' => 'Medline의 모든 초록',
+	'biblioplus-pubmed-abstracts' => 'PubMed의 모든 초록',
+	'biblioplus-hubmed-abstracts' => 'HubMed의 모든 초록',
+	'biblioplus-vkey-title' => '서지 데이터베이스로 연결',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
