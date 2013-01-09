@@ -345,6 +345,7 @@ $messages['pms'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'biblioplus-medline-abstracts' => 'Tutte le astraziune Medline:',
 	'biblioplus-pubmed-abstracts' => "Tutte l'astraziune a PubMed",
 	'biblioplus-hubmed-abstracts' => "Tutte l'astraziune a HubMed",
 	'biblioplus-vkey-title' => "collegamende a l'archivije d'a bibbliografije",
