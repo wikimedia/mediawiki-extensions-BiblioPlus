@@ -1,13 +1,13 @@
-<?php 
+<?php
 /*
-  BiblioPlus is a MediaWiki extension that performs automated 
+  BiblioPlus is a MediaWiki extension that performs automated
   retrieval of citations from Pub Med and the ISBN database. It
   formats these citations for inclusion in a reference section at
   the bottom of a page, and autonumbers and formats in-text citations.
-  
+
   License
   =======
- 
+
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
   as published by the Free Software Foundation; either version 2
@@ -20,44 +20,44 @@
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, 
+  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
   USA.
 
   Authors:
   =======
 
   The BiblioPlus extension is a modification of the Biblio extension, which was
-  originally developed by Martin Jambon and several contributors: 
-    Jason Stajich (reference formatting), 
+  originally developed by Martin Jambon and several contributors:
+    Jason Stajich (reference formatting),
     Austin Che (parser issues),
     Alexandre Gattiker (cache for pubmed & isbndb queries)
-  
+
   Modifications were written by Karen Eddy, and are indicated in the code comments.
-  
+
   Acknowledgement:
   ===============
-  Coding of BiblioPlus was supported by faculty funding to the laboratory of 
-  Prof. Harry Brumer at the Michael Smith Laboratories and Department of Chemistry, 
+  Coding of BiblioPlus was supported by faculty funding to the laboratory of
+  Prof. Harry Brumer at the Michael Smith Laboratories and Department of Chemistry,
   University of British Columbia, Vancouver, Canada.
- 
+
   Background:
   ==========
-  
-  BiblioPlus was created to correct an error in some PubMed references 
+
+  BiblioPlus was created to correct an error in some PubMed references
   containing special characters. The original Biblio extension used the
-  National Center for Biotechnology Information (NCBI)'s SOAP service, which 
+  National Center for Biotechnology Information (NCBI)'s SOAP service, which
   returns data in ISO 8859-1, but does not specify this encoding type in the 
   XML header. Therefore, the SOAP parser reads the data as UTF-8 (the default),
   which results in incorrect output of some special characters.
-  
+
   BiblioPlus uses the NCBI's eUtilities service instead, which returns XML data
   in UTF-8, solving the problem with special characters.
- 
-  BiblioPlus uses the same tags as the biblio extension, so if you are currently 
-  using Biblio, you can switch to using BiblioPlus without having to change the 
+
+  BiblioPlus uses the same tags as the biblio extension, so if you are currently
+  using Biblio, you can switch to using BiblioPlus without having to change the
   code in your pages. However, you must delete or comment out the include
   statement for Biblio, as you cannot run both simultaneously.
-  
+
   Setup instructions
   ==================
 
@@ -70,79 +70,82 @@
 
   To activate the extension:
 
-  1) Place the BiblioPlus folder in the extensions subdirectory of your 
+  1) Place the BiblioPlus folder in the extensions subdirectory of your
      MediaWiki installation
-  
+
   2) Make sure you have $wgSitename and $wgEmergencyContact set to your
      site name and email address, respectively, in LocalSettings.php. These
      variables are used to make the call to the PubMed database.
-  
+
   3) You are strongly encouraged to register your site name and
-     email address with the NCBI. The reason for this is outlined here: 
-     http://www.ncbi.nlm.nih.gov/books/NBK25497/ (See Frequency, Timing and 
-     Registration of E-utility URL Requests). The values you register with them 
-     must be the values of variables $wgSitename and $wgEmergencyContact that 
-     you set in LocalSettings.php. To do this, simply send an e-mail to 
+     email address with the NCBI. The reason for this is outlined here:
+     http://www.ncbi.nlm.nih.gov/books/NBK25497/ (See Frequency, Timing and
+     Registration of E-utility URL Requests). The values you register with them
+     must be the values of variables $wgSitename and $wgEmergencyContact that
+     you set in LocalSettings.php. To do this, simply send an e-mail to
      eutilities@ncbi.nlm.nih.gov including these values, along with a contact name.
 
   4) Get an access key for the ISBN database (isbndb.com). It is highly
-     recommended since the daily quota of queries is by default 
+     recommended since the daily quota of queries is by default
      limited to 500. Otherwise, you would share a key with everyone else.
      Follow this link, register and create a key:
 
          https://isbndb.com/account/create.html
 
-     Please contact support@isbndb.com if you want to increase your quota. 
-     Tell them you are using the BiblioPlus extension for Mediawiki, 
+     Please contact support@isbndb.com if you want to increase your quota.
+     Tell them you are using the BiblioPlus extension for Mediawiki,
      and that it links each ISBN-referenced book to their site.
 
   5) Update your LocalSettings.php file with these lines, in that order:
 
-         $isbndb_access_key = '12345678'; // your access key
+         $wgBiblioPlusIsbnDbKey = '12345678'; // your access key
          require_once("extensions/BiblioPlus/BiblioPlus.php");
 
   Optionally:
 
-  If $BiblioForce is set to false, references that are present 
-  in the <biblio> section (possibly included from a template) 
-  are listed only if they are actually cited in the text or 
+  If $wgBiblioPlusForce is set to false, references that are present
+  in the <biblio> section (possibly included from a template)
+  are listed only if they are actually cited in the text or
   forced using <nocite>.
 
   Features:
   ========
 
-  This module provides tags "cite" and "biblio". 
- 
+  This module provides tags "cite" and "biblio".
+
   "cite" tags create a citation within the text. You must create a unique key
   (can be any string with no spaces) for each citation. You can put 1 or more keys,
   separated by spaces, inside a <cite> tag. The keys do not have to be numbers;
   the citations are automatically numbered in order.
- 
+
   You must also list these keys in the "biblio" section, inside the <biblio> tag.
-  There is at most one "biblio" section on the page and it must come after 
+  There is at most one "biblio" section on the page and it must come after
   the last citation.
-  
+
   Notes to be added after a reference should be separated from the biblio key listing
   by //, as in the example below.
- 
+
   Example:
 
   In-text citation:
-  As reported previously <cite>key1 key2</cite>, the authors have determined that 
+  As reported previously <cite>key1 key2</cite>, the authors have determined that
   money can indeed buy happiness <cite>key3</cite>.
-  
+
   <biblio>
   #key1 [http://www.wikipedia.org Wikipedia]
   #key2 pmid=12345678
   #key3 isbn=0-4714-1761-0 // figure 5, page 72 is particularly interesting
   </biblio>
+
+  Please see the BiblioPlus extension page for further information on useage.
+  www.mediawiki.org/wiki/Extension:BiblioPlus
 */
 
 /*
  * Setup for BiblioPlus extension
  * @author Karen Eddy
  */
- 
+
 if (!defined('MEDIAWIKI')) {
     exit ;
 }
@@ -152,8 +155,8 @@ if (!defined('MEDIAWIKI')) {
 */
 define('CACHE_TTL', 3600 * 24);
 
-$BiblioForce = true;
-$version = "1.0";
+$wgBiblioPlusForce = true;
+$wgBiblioPlusVersion = "1.0";
 
 $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['BiblioXml'] = $dir . 'BiblioXml.php';
@@ -164,17 +167,40 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'BiblioPlus',
 	'descriptionmsg' => 'biblioplus-desc',
-	'version' => $version,
+	'version' => $wgBiblioPlusVersion,
 	'author' => array( 'Karen Eddy', 'Code from the Biblio extension by Martin Jambon' ),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
 );
 
-$wgHooks['ParserFirstCallInit'][] = 'BiblioPlusSetup';
+$moduleTemplate = array(
+	'localBasePath' => $dir . 'resources/',
+	'remoteExtPath' => 'BiblioPlus/resources/'
+);
 
-function BiblioPlusSetup( Parser $parser ) {
+$wgResourceModules['ext.biblioPlus.qtip'] = $moduleTemplate + array(
+	'scripts' => array('ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.js'),
+	'styles' => 'ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.css',
+);
+
+$wgResourceModules['ext.biblioPlus.qtip.config'] = $moduleTemplate + array(
+	'scripts' => array('ext.biblioPlus.qtip.config.js'),
+	'dependencies' => array('ext.biblioPlus.qtip'),
+	'position' => 'top'
+);
+
+$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+$wgHooks['ParserFirstCallInit'][] = 'biblioPlusSetup';
+
+function onBeforePageDisplay(&$out)
+{
+	$out->addModules('ext.biblioPlus.qtip.config');
+	return true;
+}
+
+function biblioPlusSetup( Parser $parser ) {
     $biblio = new BiblioPlus;
-    $parser -> setHook("cite", array($biblio,'Biblio_render_cite'));
-    $parser -> setHook("nocite", array($biblio, 'Biblio_render_nocite'));
-    $parser -> setHook("biblio", array($biblio, 'Biblio_render_biblio'));
-    return true;    
+    $parser -> setHook("cite", array($biblio,'biblioRenderCite'));
+    $parser -> setHook("nocite", array($biblio, 'biblioRenderNocite'));
+    $parser -> setHook("biblio", array($biblio, 'biblioRenderBiblio'));
+    return true;
 }
