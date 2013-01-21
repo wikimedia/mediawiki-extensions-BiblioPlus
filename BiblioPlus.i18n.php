@@ -416,7 +416,15 @@ $messages['uk'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Hzy980512
+ * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
+	'biblioplus-desc' => '自动从PubMed和ISBN数据库检索引文',
+	'biblioplus-doi-tooltip' => '从发行者处查看或购买文章',
+	'biblioplus-pmid-tooltip' => '从发行者处查看或购买文章（若可用）',
 	'biblioplus-isbn-tooltip' => 'isbndb.org 上的书籍信息',
+	'biblioplus-medline-abstracts' => '所有Medline摘要：',
+	'biblioplus-pubmed-abstracts' => '所有在PubMed的摘要',
+	'biblioplus-hubmed-abstracts' => '所有在HubMed的摘要',
+	'biblioplus-vkey-title' => '链接到参考文献数据库',
 );
