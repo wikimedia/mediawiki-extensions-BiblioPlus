@@ -36,6 +36,15 @@ $messages['qqq'] = array(
 	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
 );
 
+/** Arabic (العربية)
+ * @author Tarawneh
+ */
+$messages['ar'] = array(
+	'biblioplus-doi-tooltip' => 'عرض أو شراء المادة من الناشر',
+	'biblioplus-pmid-tooltip' => 'عرض أو شراء المادة من الناشر (إذا كانت متوفرة)',
+	'biblioplus-isbn-tooltip' => 'معلومات الكتاب ضمن isbndb.org',
+);
+
 /** Bashkir (башҡортса)
  * @author Sagan
  */
