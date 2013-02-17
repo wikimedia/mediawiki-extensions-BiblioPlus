@@ -30,7 +30,8 @@ $messages['qqq'] = array(
 	'biblioplus-doi-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-pmid-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-isbn-tooltip' => 'Message in the tooltip when hovering over an ISBN link in the References section.',
-	'biblioplus-medline-abstracts' => 'Text that appears after the list of references. It is followed by links to PubMed and HubMed. Do not translate Medline.',
+	'biblioplus-medline-abstracts' => '{{doc-important|Do not translate <code>Medline</code>.}}
+Text that appears after the list of references. It is followed by links to PubMed and HubMed.',
 	'biblioplus-pubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
 	'biblioplus-hubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
 	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
