@@ -172,6 +172,16 @@ $messages['gl'] = array(
 	'biblioplus-vkey-title' => 'ligazón cara á base de datos bibliográfica',
 );
 
+/** Hebrew (עברית)
+ * @author חיים
+ */
+$messages['he'] = array(
+	'biblioplus-desc' => 'מאחזר באופן אוטומטי ציטוטים על-פי PubMed ומסד הנתונים ISBN',
+	'biblioplus-doi-tooltip' => 'הצג או קנה מאמר מ- publisher',
+	'biblioplus-pmid-tooltip' => 'הצג או קנה מאמר מ- publisher (במידה וזמין)',
+	'biblioplus-isbn-tooltip' => 'מידע אודות ספרים ב- isbndb.org',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
