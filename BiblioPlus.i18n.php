@@ -365,6 +365,9 @@ $messages['pms'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'biblioplus-desc' => "Automaticamende acchie le citaziune da PubMed e da 'u database ISBN",
+	'biblioplus-doi-tooltip' => "'Ndruche o accatte l'articole da 'u pubblecatore",
+	'biblioplus-pmid-tooltip' => "'Ndruche o accatte l'articole da 'u pubblecatore (ce disponibbile)",
 	'biblioplus-isbn-tooltip' => "'Mbormaziune sus a 'u libbre sus a isbndb.org",
 	'biblioplus-medline-abstracts' => 'Tutte le astraziune Medline:',
 	'biblioplus-pubmed-abstracts' => "Tutte l'astraziune a PubMed",
