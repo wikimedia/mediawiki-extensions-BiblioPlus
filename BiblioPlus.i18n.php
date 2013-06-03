@@ -324,7 +324,7 @@ $messages['nl'] = array(
 	'biblioplus-vkey-title' => 'verwijzen naar bibliografiedatabase',
 );
 
-/** Oriya (ଓଡ଼ିଆ)
+/** Oriya (ଓଡ଼ିଆ)
  * @author Jnanaranjan Sahu
  */
 $messages['or'] = array(
