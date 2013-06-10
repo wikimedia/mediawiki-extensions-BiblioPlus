@@ -46,6 +46,20 @@ $messages['ar'] = array(
 	'biblioplus-isbn-tooltip' => 'معلومات الكتاب ضمن isbndb.org',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'biblioplus-desc' => 'Recupera automáticamente cites de PubMed y la base de datos ISBN',
+	'biblioplus-doi-tooltip' => "Ver o mercar l'artículu del editor",
+	'biblioplus-pmid-tooltip' => "Ver o mercar l'artículu del editor (si ta disponible)",
+	'biblioplus-isbn-tooltip' => 'Información del llibru en isbndb.org',
+	'biblioplus-medline-abstracts' => 'Tolos resumes de Medline:',
+	'biblioplus-pubmed-abstracts' => 'Tolos resumes de PubMed',
+	'biblioplus-hubmed-abstracts' => 'Tolos resumes de HubMed',
+	'biblioplus-vkey-title' => 'enllaz a la base de datos bibliográfica',
+);
+
 /** Bashkir (башҡортса)
  * @author Sagan
  */
@@ -454,9 +468,11 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
  * @author Kevinhksouth
  */
 $messages['zh-hant'] = array(
+	'biblioplus-desc' => '自動從PubMed和ISBN數據庫取得參考',
 	'biblioplus-doi-tooltip' => '從發佈者查看或購買條目',
 	'biblioplus-pmid-tooltip' => '從發佈者查看或購買條目（如適用）',
 	'biblioplus-isbn-tooltip' => '在 isbndb.org 上的書籍資訊',
