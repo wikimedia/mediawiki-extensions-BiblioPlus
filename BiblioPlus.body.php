@@ -182,17 +182,14 @@ class BiblioPlus {
 	*/
     function parsePubMed( $pmXml ) {
         $formattedRefs = array();
-
         $xml = simplexml_load_string( $pmXml );
 
         if ( $xml ) {
             // find the document summary tags
             $docSums = $xml;
-            while ( $docSums->getName() != 'DocumentSummary' ) {
-                $docSums = $docSums->children();
-            }
+			$docSums = $docSums->xpath('//DocumentSummary');
 
-            // extract required information from each document summary
+           // extract required information from each document summary
             foreach ( $docSums as $docSum ) {
                 $authors = array();
 
@@ -200,10 +197,12 @@ class BiblioPlus {
                 $pmid = ( string )$docSum['uid'];
 
                 // get the list of authors
-                foreach ( $docSum->Authors->children() as $author ) {
-                    $authors[] = $author->Name;
-                }
-                $authors = $this->concatAuthors( $authors );
+				if ( $docSum->Authors ) {
+					foreach ( $docSum->Authors->children() as $author ) {
+						$authors[] = $author->Name;
+					}
+					$authors = $this->concatAuthors( $authors );
+				}
 
                 // get the other attributes
                 $title = $docSum->Title;
@@ -214,13 +213,14 @@ class BiblioPlus {
                 $pages = $docSum->Pages;
                 $doi = '';
 
-                foreach ( $docSum->ArticleIds->children() as $articleId ) {
-                    if ( $articleId->IdType == 'doi' ) {
-                        $doi = $articleId->Value;
-                        break;
-                    }
-                }
-
+				if ( $docSum->ArticleIds ) {
+					foreach ( $docSum->ArticleIds->children() as $articleId ) {
+						if ( $articleId->IdType == 'doi' ) {
+							$doi = $articleId->Value;
+							break;
+						}
+					}
+				}
                 // format for output to page
                 $origin = "$source $pubDate";
                 $origin .= $volume == '' ? '' : ";$volume";
