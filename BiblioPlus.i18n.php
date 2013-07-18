@@ -132,6 +132,13 @@ $messages['es'] = array(
 	'biblioplus-vkey-title' => 'enlace a la base de datos bibliográfica',
 );
 
+/** Persian (فارسی)
+ * @author Alireza
+ */
+$messages['fa'] = array(
+	'biblioplus-doi-tooltip' => 'مشاهده یا خرید مقاله از ناشر',
+);
+
 /** Finnish (suomi)
  * @author Nedergard
  * @author VezonThunder
