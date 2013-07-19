@@ -297,6 +297,14 @@ $messages['lb'] = array(
 	'biblioplus-vkey-title' => "Link op d'Datebank vun de Bibliografien",
 );
 
+/** Lithuanian (lietuvių)
+ * @author Eitvys200
+ */
+$messages['lt'] = array(
+	'biblioplus-doi-tooltip' => 'Peržiūrėti ar pirkti straipsnį iš leidėjo',
+	'biblioplus-pmid-tooltip' => 'Peržiūrėti ar pirkti straipsnį iš leidėjo (jei įmanoma)',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
