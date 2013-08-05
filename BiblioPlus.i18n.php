@@ -260,6 +260,7 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Fryed-peach
  * @author Shirayuki
  */
 $messages['ja'] = array(
@@ -267,6 +268,10 @@ $messages['ja'] = array(
 	'biblioplus-doi-tooltip' => '発行者の記事を閲覧または購入',
 	'biblioplus-pmid-tooltip' => '発行者の記事を閲覧または購入 (利用できる場合)',
 	'biblioplus-isbn-tooltip' => 'isbndb.org の書籍情報',
+	'biblioplus-medline-abstracts' => 'すべての Medline のアブストラクト:',
+	'biblioplus-pubmed-abstracts' => 'PubMed の全アブストラクト',
+	'biblioplus-hubmed-abstracts' => 'HubMed の全アブストラクト',
+	'biblioplus-vkey-title' => '書誌データベースへのリンク',
 );
 
 /** Korean (한국어)
