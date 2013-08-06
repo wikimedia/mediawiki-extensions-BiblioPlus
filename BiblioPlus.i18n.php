@@ -34,7 +34,7 @@ $messages['qqq'] = array(
 Text that appears after the list of references. It is followed by links to PubMed and HubMed.',
 	'biblioplus-pubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
 	'biblioplus-hubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
-	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying This is a link to the bibliography database.',
+	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying "This is a link to the bibliography database".',
 );
 
 /** Arabic (العربية)
