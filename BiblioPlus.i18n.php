@@ -69,6 +69,20 @@ $messages['ba'] = array(
 	'biblioplus-isbn-tooltip' => 'Китап тураһында мәғлүмәт isbndb.org',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'biblioplus-desc' => 'Awtomatikong minahalungkat kan mga kasambitan gikan sa PubMed asin sa datos-sarayan kan ISBN',
+	'biblioplus-doi-tooltip' => 'Tanawon o bakalon an artikulo gikan sa tagapagpublikar',
+	'biblioplus-pmid-tooltip' => 'Tanawon o bakalon an artikulo gikan sa tagapagpublikar (kun yaon)',
+	'biblioplus-isbn-tooltip' => 'Impormasyon kan libro yaon sa isbndb.org',
+	'biblioplus-medline-abstracts' => 'Gabos na karurakan kan Medline:',
+	'biblioplus-pubmed-abstracts' => 'Gabos na mga karurakan na yaon sa PubMed',
+	'biblioplus-hubmed-abstracts' => 'Gabos na mga karurakan na yaon sa HubMed',
+	'biblioplus-vkey-title' => 'kasugpon sa bibliograpiyang datos-sarayan',
+);
+
 /** Catalan (català)
  * @author Arnaugir
  */
