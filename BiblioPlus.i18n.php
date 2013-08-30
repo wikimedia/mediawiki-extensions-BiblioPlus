@@ -168,6 +168,16 @@ $messages['fi'] = array(
 	'biblioplus-vkey-title' => 'linkki bibliografiseen tietokantaan',
 );
 
+/** Faroese (føroyskt)
+ * @author EileenSanda
+ */
+$messages['fo'] = array(
+	'biblioplus-doi-tooltip' => 'Síggj ella keyp greinina frá útgevaranum',
+	'biblioplus-pmid-tooltip' => 'Síggj ella keyp greinina frá útgevaranum (um hon er tøk)',
+	'biblioplus-isbn-tooltip' => 'Kunning um bókina á isbndb.org',
+	'biblioplus-pubmed-abstracts' => 'Øll abstraktini á PubMed',
+);
+
 /** French (français)
  * @author Cquoi
  * @author Tititou36
