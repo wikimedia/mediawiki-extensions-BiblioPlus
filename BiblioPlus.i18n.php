@@ -83,6 +83,13 @@ $messages['bcl'] = array(
 	'biblioplus-vkey-title' => 'kasugpon sa bibliograpiyang datos-sarayan',
 );
 
+/** Breton (brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'biblioplus-doi-tooltip' => 'Gwelet pe prenañ ur pennad digant un embanner',
+);
+
 /** Catalan (català)
  * @author Arnaugir
  */
