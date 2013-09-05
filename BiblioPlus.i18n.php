@@ -88,6 +88,7 @@ $messages['bcl'] = array(
  */
 $messages['br'] = array(
 	'biblioplus-doi-tooltip' => 'Gwelet pe prenañ ur pennad digant un embanner',
+	'biblioplus-vkey-title' => 'liamm war-du an diaz roadennoù levrlennadur',
 );
 
 /** Catalan (català)
