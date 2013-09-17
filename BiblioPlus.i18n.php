@@ -337,12 +337,13 @@ $messages['ksh'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
 	'biblioplus-desc' => 'Rifft Zitatiounen automatesch vu PubMed an aus der ISBN-Datebank erof',
 	'biblioplus-doi-tooltip' => 'Den Artikel beim Editeur kucken oder kafen',
 	'biblioplus-pmid-tooltip' => 'Artikel vum Verlag kucken oder kafen (wann se disponibel sinn)',
-	'biblioplus-isbn-tooltip' => "Informatioun iwwert d'Buch op isbndb.org",
+	'biblioplus-isbn-tooltip' => "Informatioun iwwer d'Buch op isbndb.org",
 	'biblioplus-medline-abstracts' => 'All Resuméë vu Medline:',
 	'biblioplus-pubmed-abstracts' => 'All Resuméë vu PubMed',
 	'biblioplus-hubmed-abstracts' => 'All Resuméë vu HubMed',
