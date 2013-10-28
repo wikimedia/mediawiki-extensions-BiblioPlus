@@ -408,6 +408,14 @@ $messages['nl'] = array(
 	'biblioplus-vkey-title' => 'verwijzen naar bibliografiedatabase',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'biblioplus-medline-abstracts' => 'Totes los resumits de Medline :',
+	'biblioplus-pubmed-abstracts' => 'Totes los resumits a PubMed',
+);
+
 /** Oriya (ଓଡ଼ିଆ)
  * @author Jnanaranjan Sahu
  */
