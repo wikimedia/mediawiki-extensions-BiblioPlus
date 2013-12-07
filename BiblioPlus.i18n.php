@@ -100,7 +100,7 @@ $messages['ca'] = array(
 	'biblioplus-vkey-title' => 'enllaç a la base de dades de bibliografia',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Vks
  */
 $messages['cs'] = array(
