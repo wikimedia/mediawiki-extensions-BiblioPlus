@@ -453,6 +453,14 @@ $messages['pms'] = array(
 	'biblioplus-vkey-title' => 'liura a la base ëd dàit bibliogràfica',
 );
 
+/** Portuguese (português)
+ * @author Giro720
+ */
+$messages['pt'] = array(
+	'biblioplus-desc' => 'Recupera automaticamente as referências da base de dados PubMed e ISBN',
+	'biblioplus-doi-tooltip' => 'Ver ou comprar o artigo da editora',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
