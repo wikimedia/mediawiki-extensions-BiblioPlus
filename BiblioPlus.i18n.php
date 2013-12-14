@@ -454,11 +454,15 @@ $messages['pms'] = array(
 );
 
 /** Portuguese (português)
+ * @author Fúlvio
  * @author Giro720
  */
 $messages['pt'] = array(
 	'biblioplus-desc' => 'Recupera automaticamente as referências da base de dados PubMed e ISBN',
 	'biblioplus-doi-tooltip' => 'Ver ou comprar o artigo da editora',
+	'biblioplus-pmid-tooltip' => 'Ver ou comprar o artigo da editora (se disponível)',
+	'biblioplus-isbn-tooltip' => 'Informação do livro em isbndb.org',
+	'biblioplus-vkey-title' => 'ligação para a base de dados bibliográfica',
 );
 
 /** tarandíne (tarandíne)
