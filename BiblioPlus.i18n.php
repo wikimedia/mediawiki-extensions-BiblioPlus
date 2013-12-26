@@ -156,9 +156,17 @@ $messages['es'] = array(
 
 /** Persian (فارسی)
  * @author Alireza
+ * @author Armin1392
  */
 $messages['fa'] = array(
+	'biblioplus-desc' => 'بازیابی خودکار ایرادها از پایگاه اطلاعاتی پابمد و آی‌اس‌بی‌ان',
 	'biblioplus-doi-tooltip' => 'مشاهده یا خرید مقاله از ناشر',
+	'biblioplus-pmid-tooltip' => 'مقاله را (در صورت موجود) از ناشر، مشاهده یا خریداری کنید',
+	'biblioplus-isbn-tooltip' => 'اطلاعات کتاب در isbndb.org',
+	'biblioplus-medline-abstracts' => 'همهٔ چکیده‌های مدلین:',
+	'biblioplus-pubmed-abstracts' => 'همهٔ چکیده‌ها در پاب‌مِد',
+	'biblioplus-hubmed-abstracts' => 'همهٔ چکیده‌ها در هاب‌مِد',
+	'biblioplus-vkey-title' => 'اتصال به پایگاه اطلاعاتی کتاب‌شناسی',
 );
 
 /** Finnish (suomi)
