@@ -31,9 +31,19 @@ $messages['qqq'] = array(
 	'biblioplus-pmid-tooltip' => 'Message in the tooltip when hovering over a reference in the References section.',
 	'biblioplus-isbn-tooltip' => 'Message in the tooltip when hovering over an ISBN link in the References section.',
 	'biblioplus-medline-abstracts' => '{{doc-important|Do not translate <code>Medline</code>.}}
-Text that appears after the list of references. It is followed by links to PubMed and HubMed.',
-	'biblioplus-pubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
-	'biblioplus-hubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.',
+Text that appears after the list of references. It is followed by links to PubMed and HubMed.
+
+Link texts for PubMed and HubMed are:
+* {{msg-mw|Biblioplus-pubmed-abstracts}}
+* {{msg-mw|Biblioplus-hubmed-abstracts}}',
+	'biblioplus-pubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.
+
+The link is preceded by the label {{msg-mw|Biblioplus-medline-abstracts}}.
+
+Followed by {{msg-mw|Biblioplus-hubmed-abstracts}}.',
+	'biblioplus-hubmed-abstracts' => 'Message in the tooltip when hovering over a link to all references.
+
+Preceded by {{msg-mw|Biblioplus-medline-abstracts}} and {{msg-mw|Biblioplus-pubmed-abstracts}}.',
 	'biblioplus-vkey-title' => 'Message in the tooltip when hovering over a certain type of reference. Same as saying "This is a link to the bibliography database".',
 );
 
