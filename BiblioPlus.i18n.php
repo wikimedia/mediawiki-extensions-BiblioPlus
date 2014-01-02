@@ -245,12 +245,15 @@ $messages['gl'] = array(
 
 /** Hebrew (עברית)
  * @author חיים
+ * @author ליאור
  */
 $messages['he'] = array(
 	'biblioplus-desc' => 'מאחזר באופן אוטומטי ציטוטים על-פי PubMed ומסד הנתונים ISBN',
 	'biblioplus-doi-tooltip' => 'הצג או קנה מאמר מ- publisher',
 	'biblioplus-pmid-tooltip' => 'הצג או קנה מאמר מ- publisher (במידה וזמין)',
 	'biblioplus-isbn-tooltip' => 'מידע אודות ספרים ב- isbndb.org',
+	'biblioplus-pubmed-abstracts' => 'כל תקצירי המאמרים מאתר פאבמד (PubMed)',
+	'biblioplus-hubmed-abstracts' => 'כל תקצירי המאמרים מאתר האבמד (HubMed)',
 );
 
 /** Upper Sorbian (hornjoserbsce)
