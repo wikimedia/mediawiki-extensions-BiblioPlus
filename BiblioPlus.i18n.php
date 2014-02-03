@@ -244,6 +244,7 @@ $messages['gl'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Yona b
  * @author חיים
  * @author ליאור
  */
@@ -252,8 +253,10 @@ $messages['he'] = array(
 	'biblioplus-doi-tooltip' => 'הצג או קנה מאמר מ- publisher',
 	'biblioplus-pmid-tooltip' => 'הצג או קנה מאמר מ- publisher (במידה וזמין)',
 	'biblioplus-isbn-tooltip' => 'מידע אודות ספרים ב- isbndb.org',
+	'biblioplus-medline-abstracts' => 'כל תקצירי Medline:',
 	'biblioplus-pubmed-abstracts' => 'כל תקצירי המאמרים מאתר פאבמד (PubMed)',
 	'biblioplus-hubmed-abstracts' => 'כל תקצירי המאמרים מאתר האבמד (HubMed)',
+	'biblioplus-vkey-title' => 'קישור למסד נתונים ביבליוגרפי',
 );
 
 /** Upper Sorbian (hornjoserbsce)
