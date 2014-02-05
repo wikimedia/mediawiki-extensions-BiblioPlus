@@ -695,7 +695,7 @@ class BiblioPlus {
 	* @param Parser $parser: Parser object.
 	* @return string: The cite tag, formatted for output to the page.
 	*/
-    function biblioRenderCite( $input, $params, $parser = null ) {
+    function biblioRenderCite( $input, $params, $parser ) {
         return $this->renderCite( $input, $this->biblioGetParserData( $parser ), true );
     }
 
@@ -707,7 +707,7 @@ class BiblioPlus {
 	* @param Parser $parser: Parser object.
 	* @return string: The nocite tag, formatted for output to the page.
 	*/
-	function biblioRenderNocite( $input, $params, $parser = null ) {
+	function biblioRenderNocite( $input, $params, $parser ) {
           return $this->renderNocite( $input, $this->biblioGetParserData( $parser ), false );
     }
 
@@ -719,7 +719,7 @@ class BiblioPlus {
 	* @param Parser $parser: Parser object.
 	* @return string: The biblio tag, formatted for output to the page.
 	*/
-	function biblioRenderBiblio( $input, $params, $parser = null ) {
+	function biblioRenderBiblio( $input, $params, $parser ) {
 		global $wgBiblioPlusForce;
 		if ( isset( $params['force'] ) )
 		{
@@ -744,17 +744,10 @@ class BiblioPlus {
     function biblioGetParserData( $parser ) {
         $parserData = array();
 
-        if ( $parser != null ) {
-            $parserData['parser'] = $parser;
-            $parserData['title'] = $parser->getTitle();
-            $parserData['options'] = $parser->getOptions();
-            $parserData['options']->enableLimitReport( false );
-        } else {
-            global $wgParser, $wgTitle, $wgOut;
-            $parserData['parser'] = $wgParser;
-            $parserData['title'] = $wgTitle;
-            $parserData['options'] = $wgOut->mParserOptions;
-        }
+        $parserData['parser'] = $parser;
+        $parserData['title'] = $parser->getTitle();
+        $parserData['options'] = $parser->getOptions();
+        $parserData['options']->enableLimitReport( false );
         return $parserData;
     }
 
