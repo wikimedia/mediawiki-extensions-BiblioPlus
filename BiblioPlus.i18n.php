@@ -544,6 +544,14 @@ $messages['sv'] = array(
 	'biblioplus-vkey-title' => 'länk till databasen med bibliografier',
 );
 
+/** Telugu (తెలుగు)
+ * @author Ravichandra
+ */
+$messages['te'] = array(
+	'biblioplus-doi-tooltip' => 'ప్రచురణకర్త నుంచి వ్యాసం కొనండి లేదా చూడండి',
+	'biblioplus-pmid-tooltip' => 'ప్రచురణకర్త నుంచి వ్యాసం కొనండి లేదా చూడండి(అందుబాటులో ఉంటే)',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
