@@ -98,6 +98,10 @@ $messages['bcl'] = array(
  */
 $messages['br'] = array(
 	'biblioplus-doi-tooltip' => 'Gwelet pe prenañ ur pennad digant un embanner',
+	'biblioplus-isbn-tooltip' => 'Titouroù diwar-benn al levr en isbndb.org',
+	'biblioplus-medline-abstracts' => 'Holl diverradurioù Medline :',
+	'biblioplus-pubmed-abstracts' => 'An holl diverradurioù e PubMed',
+	'biblioplus-hubmed-abstracts' => 'An holl diverradurioù en HubMed',
 	'biblioplus-vkey-title' => 'liamm war-du an diaz roadennoù levrlennadur',
 );
 
