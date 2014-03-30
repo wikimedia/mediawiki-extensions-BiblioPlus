@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": [
+            "Tarawneh"
+        ]
+    },
+    "biblioplus-doi-tooltip": "عرض أو شراء المادة من الناشر",
+    "biblioplus-pmid-tooltip": "عرض أو شراء المادة من الناشر (إذا كانت متوفرة)",
+    "biblioplus-isbn-tooltip": "معلومات الكتاب ضمن isbndb.org"
+}

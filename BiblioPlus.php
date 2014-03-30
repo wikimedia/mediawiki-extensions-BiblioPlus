@@ -46,7 +46,7 @@
   BiblioPlus was created to correct an error in some PubMed references
   containing special characters. The original Biblio extension used the
   National Center for Biotechnology Information (NCBI)'s SOAP service, which
-  returns data in ISO 8859-1, but does not specify this encoding type in the 
+  returns data in ISO 8859-1, but does not specify this encoding type in the
   XML header. Therefore, the SOAP parser reads the data as UTF-8 (the default),
   which results in incorrect output of some special characters.
 
@@ -156,11 +156,12 @@ if (!defined('MEDIAWIKI')) {
 define('CACHE_TTL', 3600 * 24);
 
 $wgBiblioPlusForce = true;
-$wgBiblioPlusVersion = "1.0";
+$wgBiblioPlusVersion = "1.1.0";
 
 $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['BiblioXml'] = $dir . 'BiblioXml.php';
 $wgAutoloadClasses['BiblioPlus'] = $dir . 'BiblioPlus.body.php';
+$wgMessagesDirs['BiblioPlus'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['BiblioPlus'] = "$dir/BiblioPlus.i18n.php";
 
 $wgExtensionCredits['parserhook'][] = array(
