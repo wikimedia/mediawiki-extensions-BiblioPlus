@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Arnaugir"
-        ]
-    },
-    "biblioplus-pubmed-abstracts": "Tots els resums a PubMed",
-    "biblioplus-hubmed-abstracts": "Tots els resums a HubMed",
-    "biblioplus-vkey-title": "enllaç a la base de dades de bibliografia"
+	"@metadata": {
+		"authors": [
+			"Arnaugir"
+		]
+	},
+	"biblioplus-pubmed-abstracts": "Tots els resums a PubMed",
+	"biblioplus-hubmed-abstracts": "Tots els resums a HubMed",
+	"biblioplus-vkey-title": "enllaç a la base de dades de bibliografia"
 }

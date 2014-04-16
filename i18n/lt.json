@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Eitvys200"
-        ]
-    },
-    "biblioplus-doi-tooltip": "Peržiūrėti ar pirkti straipsnį iš leidėjo",
-    "biblioplus-pmid-tooltip": "Peržiūrėti ar pirkti straipsnį iš leidėjo (jei įmanoma)"
+	"@metadata": {
+		"authors": [
+			"Eitvys200"
+		]
+	},
+	"biblioplus-doi-tooltip": "Peržiūrėti ar pirkti straipsnį iš leidėjo",
+	"biblioplus-pmid-tooltip": "Peržiūrėti ar pirkti straipsnį iš leidėjo (jei įmanoma)"
 }

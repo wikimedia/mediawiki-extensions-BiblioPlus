@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Cedric31"
-        ]
-    },
-    "biblioplus-medline-abstracts": "Totes los resumits de Medline :",
-    "biblioplus-pubmed-abstracts": "Totes los resumits a PubMed"
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"biblioplus-medline-abstracts": "Totes los resumits de Medline :",
+	"biblioplus-pubmed-abstracts": "Totes los resumits a PubMed"
 }
