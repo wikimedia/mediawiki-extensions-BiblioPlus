@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hzy980512",
-			"Yfdyh000"
+			"Yfdyh000",
+			"Mywood"
 		]
 	},
 	"biblioplus-desc": "自动从PubMed和ISBN数据库检索引文",
@@ -12,5 +13,5 @@
 	"biblioplus-medline-abstracts": "所有Medline摘要：",
 	"biblioplus-pubmed-abstracts": "所有在PubMed的摘要",
 	"biblioplus-hubmed-abstracts": "所有在HubMed的摘要",
-	"biblioplus-vkey-title": "链接到参考文献数据库"
+	"biblioplus-vkey-title": "查看参考书目数据库"
 }
