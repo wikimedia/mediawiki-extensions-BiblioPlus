@@ -10,7 +10,7 @@ class BiblioPlus {
 	/**
 	* @var array $citations: Management of the citation indices (order in which they appear in the text).
 	*/
-    var $citations = array();
+    public $citations = array();
 
     /**
 	* Returns an array element with index $key, or null if it does not exist.

@@ -7,12 +7,12 @@ class BiblioXml {
 	/*
 	 * @var Xml Parser $parser: The xml parser to parse the input text.
 	 */
-	var $parser;
+	public $parser;
 
 	/*
 	 * @var array $data: Holds the data parsed from the xml document.
 	 */
-	var $data;
+	public $data;
 
 	/*
 	 * The xml element handler for xml open tags.
