@@ -4,6 +4,8 @@
 			"Cedric31"
 		]
 	},
+	"biblioplus-isbn-tooltip": "Informacion sul libre a isbndb.org",
 	"biblioplus-medline-abstracts": "Totes los resumits de Medline :",
-	"biblioplus-pubmed-abstracts": "Totes los resumits a PubMed"
+	"biblioplus-pubmed-abstracts": "Totes los resumits a PubMed",
+	"biblioplus-hubmed-abstracts": "Totes los resumits a HubMed"
 }
