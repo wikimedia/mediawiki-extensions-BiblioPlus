@@ -4,13 +4,14 @@
 			"Hzy980512",
 			"Yfdyh000",
 			"Mywood",
-			"Impersonator 1"
+			"Impersonator 1",
+			"Duolaimi"
 		]
 	},
 	"biblioplus-desc": "自动从PubMed和ISBN数据库检索引文",
 	"biblioplus-doi-tooltip": "从发行者处查看或购买文章",
 	"biblioplus-pmid-tooltip": "从发行者处查看或购买文章（若可用）",
-	"biblioplus-isbn-tooltip": "isbndb.org 上的书籍信息",
+	"biblioplus-isbn-tooltip": "isbndb.org的图书信息",
 	"biblioplus-medline-abstracts": "所有Medline摘要：",
 	"biblioplus-pubmed-abstracts": "所有在PubMed的摘要",
 	"biblioplus-hubmed-abstracts": "所有在HubMed的摘要",
