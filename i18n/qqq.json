@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
-	"biblioplus-desc": "{{desc|name=Biblio Plus|url=http://www.mediawiki.org/wiki/Extension:BiblioPlus}}",
+	"biblioplus-desc": "{{desc|name=Biblio Plus|url=https://www.mediawiki.org/wiki/Extension:BiblioPlus}}",
 	"biblioplus-doi-tooltip": "Message in the tooltip when hovering over a reference in the References section.",
 	"biblioplus-pmid-tooltip": "Message in the tooltip when hovering over a reference in the References section.",
 	"biblioplus-isbn-tooltip": "Message in the tooltip when hovering over an ISBN link in the References section.",
