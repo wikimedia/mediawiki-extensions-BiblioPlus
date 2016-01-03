@@ -260,15 +260,15 @@ class BiblioPlus {
 
         // set the link for the citation itself
         if ( $doi != '' ) {
-            $title = 'title="'. wfMsg( 'biblioplus-doi-tooltip' ) .'"';
+            $title = 'title="'. wfMessage( 'biblioplus-doi-tooltip' )->escaped() .'"';
             $result = "<a href=\"http://dx.doi.org/$doi\" $title $style>$result</a>";
             $codes .= " " . $this->htmlInterLink( "http://dx.doi.org/$doi", $this->smallCaps( 'DOI:' ) .
 				$doi, "DOI: $doi" ) . ' |';
         } elseif ( $pmid != '' ) {
-            $title = 'title="' .wfMsg( 'biblioplus-pmid-tooltip' ) . '"';
+            $title = 'title="' .wfMessage( 'biblioplus-pmid-tooltip' )->escaped() . '"';
             $result = "<a href=\"http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=$pmid\" $title $style>$result</a>";
         } elseif ( $isbn != '' ) {
-            $title = 'title="' . wfMsg( 'biblioplus-isbn-tooltip' ) . '"';
+            $title = 'title="' . wfMessage( 'biblioplus-isbn-tooltip' )->escaped() . '"';
             $result = "<a href=\"http://isbndb.com/d/book/$isbndbref.html\" $title $style>$result</a>";
             $codes .= ' ' . $this->htmlInterLink( "http://isbndb.com/d/book/$isbndbref.html",
 				$this->smallCaps( 'ISBN:' ) . $isbn, "ISBN:$isbn" );
@@ -898,11 +898,11 @@ class BiblioPlus {
             $header = $this->errorbox( implode( '<br>', $errors ) );
         }
         if ( count( $sortedPmids ) > 1 ) {
-            $footer .= wfMsg( 'biblioplus-medline-abstracts' ) . ' ' .
+            $footer .= wfMessage( 'biblioplus-medline-abstracts' )->escaped() . ' ' .
 				$this->htmlInterLink( $this->pubMedUrl( $sortedPmids ),
-				$this->smallCaps( 'PubMed' ), wfMsg( 'biblioplus-pubmed-abstracts' ) ) .
+				$this->smallCaps( 'PubMed' ), wfMessage( 'biblioplus-pubmed-abstracts' )->escaped() ) .
 				' | ' . $this->htmlInterLink( $this->hubMedUrl( $sortedPmids ),
-				$this->smallCaps( 'HubMed' ), wfMsg( 'biblioplus-hubmed-abstracts' ) );
+				$this->smallCaps( 'HubMed' ), wfMessage( 'biblioplus-hubmed-abstracts' )->escaped() );
             $footer = $this->noprint( $footer );
         }
         $result = array();
@@ -915,7 +915,7 @@ class BiblioPlus {
             if ( isset( $ref['biburl'] ) ) {
                 $biburl = htmlspecialchars( $ref['biburl'] );
                 $vkey = '<a href="' .$biburl .'" class="extiw" style="text-decoration:none" title="' .
-					wfMsg( 'biblioplus-vkey-title' ) . '">' . $vkey . '</a>';
+					wfMessage( 'biblioplus-vkey-title' )->escaped() . '">' . $vkey . '</a>';
             }
             $vkey = $this->noprint( $vkey );
             $vkey .= " $annot";
