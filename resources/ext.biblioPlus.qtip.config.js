@@ -1,11 +1,12 @@
 jQuery( document ).ready( function () {
 	var key;
+	var ref;
 
-	$( '.tooltip-from-element' ).qtip ( {
+	jQuery( '.tooltip-from-element' ).qtip ( {
 		content: {
-			text: function( api ) {
-				key = $( this ).attr( 'href' );
-				ref = $( key ).html();
+			text: function() {
+				key = jQuery( this ).attr( 'href' );
+				ref = jQuery( key ).html();
 				if ( ref.length !== 0 ) {
 					return ref;
 				}
@@ -20,12 +21,12 @@ jQuery( document ).ready( function () {
 			delay: 500
 		},
 		position: {
-			viewport: $( window ),
+			viewport: jQuery( window ),
 			my: 'top left',
 			at: 'bottom center',
 			adjust: {
 				method: 'flip',
 			}
 		}
-	})
+	});
 });
