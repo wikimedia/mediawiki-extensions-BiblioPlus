@@ -13,8 +13,7 @@ jQuery( document ).ready( function () {
 			}
 		},
 		style: {
-			classes: 'ui-tooltip-shadow ui-tooltip-bootstrap',
-			width: 400
+			classes: 'qtip-shadow qtip-bootstrap'			
 		},
 		hide: {
 			fixed: true,

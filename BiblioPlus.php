@@ -156,7 +156,7 @@ if (!defined('MEDIAWIKI')) {
 define('CACHE_TTL', 3600 * 24);
 
 $wgBiblioPlusForce = true;
-$wgBiblioPlusVersion = "1.1.0";
+$wgBiblioPlusVersion = "1.2.0";
 
 $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['BiblioXml'] = $dir . 'BiblioXml.php';
