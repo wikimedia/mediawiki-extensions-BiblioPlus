@@ -148,7 +148,7 @@ class BiblioPlus {
     function eSummary( $pmids ) {
         if ( count( $pmids ) > 0 ) {
             global $wgSitename, $wgEmergencyContact;
-            define( 'EUTILS_ROOT', "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/" );
+            define( 'EUTILS_ROOT', "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/" );
             define( 'ESUMMARY_URL', EUTILS_ROOT . 'esummary.fcgi' );
 
 			wfSuppressWarnings();
@@ -266,7 +266,7 @@ class BiblioPlus {
 				$doi, "DOI: $doi" ) . ' |';
         } elseif ( $pmid != '' ) {
             $title = 'title="' .wfMessage( 'biblioplus-pmid-tooltip' )->escaped() . '"';
-            $result = "<a href=\"http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=$pmid\" $title $style>$result</a>";
+            $result = "<a href=\"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=$pmid\" $title $style>$result</a>";
         } elseif ( $isbn != '' ) {
             $title = 'title="' . wfMessage( 'biblioplus-isbn-tooltip' )->escaped() . '"';
             $result = "<a href=\"http://isbndb.com/d/book/$isbndbref.html\" $title $style>$result</a>";
@@ -309,7 +309,7 @@ class BiblioPlus {
 	*/
     function pubMedUrl( $pmids ) {
         $listUids = implode( ',', $pmids );
-        return "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=$listUids";
+        return "https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=$listUids";
     }
 
 	/**
