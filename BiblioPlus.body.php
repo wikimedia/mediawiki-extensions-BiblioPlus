@@ -75,12 +75,12 @@ class BiblioPlus {
 	/**
 	* Returns the source code of a local wiki page.
 	*
-	* @param string $title: The title of the wiki page.
+	* @param Title $title: The title of the wiki page.
 	* @return string: The source code of the input page.
 	*/
     function fetchPage( $title ) {
         $rev = Revision::newFromTitle( $title );
-        return $rev->getText();
+        return ContentHandler::getContentText( $rev->getContent() );
     }
 
 	/**
