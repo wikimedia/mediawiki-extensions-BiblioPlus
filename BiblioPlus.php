@@ -28,9 +28,9 @@
 
   The BiblioPlus extension is a modification of the Biblio extension, which was
   originally developed by Martin Jambon and several contributors:
-    Jason Stajich (reference formatting),
-    Austin Che (parser issues),
-    Alexandre Gattiker (cache for pubmed & isbndb queries)
+	Jason Stajich (reference formatting),
+	Austin Che (parser issues),
+	Alexandre Gattiker (cache for pubmed & isbndb queries)
 
   Modifications were written by Karen Eddy, and are indicated in the code comments.
 
@@ -71,35 +71,35 @@
   To activate the extension:
 
   1) Place the BiblioPlus folder in the extensions subdirectory of your
-     MediaWiki installation
+	 MediaWiki installation
 
   2) Make sure you have $wgSitename and $wgEmergencyContact set to your
-     site name and email address, respectively, in LocalSettings.php. These
-     variables are used to make the call to the PubMed database.
+	 site name and email address, respectively, in LocalSettings.php. These
+	 variables are used to make the call to the PubMed database.
 
   3) You are strongly encouraged to register your site name and
-     email address with the NCBI. The reason for this is outlined here:
-     http://www.ncbi.nlm.nih.gov/books/NBK25497/ (See Frequency, Timing and
-     Registration of E-utility URL Requests). The values you register with them
-     must be the values of variables $wgSitename and $wgEmergencyContact that
-     you set in LocalSettings.php. To do this, simply send an e-mail to
-     eutilities@ncbi.nlm.nih.gov including these values, along with a contact name.
+	 email address with the NCBI. The reason for this is outlined here:
+	 http://www.ncbi.nlm.nih.gov/books/NBK25497/ (See Frequency, Timing and
+	 Registration of E-utility URL Requests). The values you register with them
+	 must be the values of variables $wgSitename and $wgEmergencyContact that
+	 you set in LocalSettings.php. To do this, simply send an e-mail to
+	 eutilities@ncbi.nlm.nih.gov including these values, along with a contact name.
 
   4) Get an access key for the ISBN database (isbndb.com). It is highly
-     recommended since the daily quota of queries is by default
-     limited to 500. Otherwise, you would share a key with everyone else.
-     Follow this link, register and create a key:
+	 recommended since the daily quota of queries is by default
+	 limited to 500. Otherwise, you would share a key with everyone else.
+	 Follow this link, register and create a key:
 
-         https://isbndb.com/account/create.html
+		 https://isbndb.com/account/create.html
 
-     Please contact support@isbndb.com if you want to increase your quota.
-     Tell them you are using the BiblioPlus extension for Mediawiki,
-     and that it links each ISBN-referenced book to their site.
+	 Please contact support@isbndb.com if you want to increase your quota.
+	 Tell them you are using the BiblioPlus extension for Mediawiki,
+	 and that it links each ISBN-referenced book to their site.
 
   5) Update your LocalSettings.php file with these lines, in that order:
 
-         $wgBiblioPlusIsbnDbKey = '12345678'; // your access key
-         require_once("extensions/BiblioPlus/BiblioPlus.php");
+		 $wgBiblioPlusIsbnDbKey = '12345678'; // your access key
+		 require_once("extensions/BiblioPlus/BiblioPlus.php");
 
   Optionally:
 
@@ -147,7 +147,7 @@
  */
 
 if (!defined('MEDIAWIKI')) {
-    exit ;
+	exit ;
 }
 
 /*
@@ -200,9 +200,9 @@ function onBeforePageDisplay(&$out)
 }
 
 function biblioPlusSetup( Parser $parser ) {
-    $biblio = new BiblioPlus;
-    $parser -> setHook("cite", array($biblio,'biblioRenderCite'));
-    $parser -> setHook("nocite", array($biblio, 'biblioRenderNocite'));
-    $parser -> setHook("biblio", array($biblio, 'biblioRenderBiblio'));
-    return true;
+	$biblio = new BiblioPlus;
+	$parser -> setHook("cite", array($biblio,'biblioRenderCite'));
+	$parser -> setHook("nocite", array($biblio, 'biblioRenderNocite'));
+	$parser -> setHook("biblio", array($biblio, 'biblioRenderBiblio'));
+	return true;
 }
