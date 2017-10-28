@@ -162,7 +162,6 @@ $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['BiblioXml'] = $dir . 'BiblioXml.php';
 $wgAutoloadClasses['BiblioPlus'] = $dir . 'BiblioPlus.body.php';
 $wgMessagesDirs['BiblioPlus'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['BiblioPlus'] = "$dir/BiblioPlus.i18n.php";
 
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
