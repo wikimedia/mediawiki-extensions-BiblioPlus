@@ -12,6 +12,7 @@ module.exports = function ( grunt ) {
 			all: [
 				'**/*.js',
 				'!node_modules/**',
+				'!vendor/**',
 				'!resources/ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.js'
 			]
 		},
@@ -21,7 +22,8 @@ module.exports = function ( grunt ) {
 		jsonlint: {
 			all: [
 				'**/*.json',
-				'!node_modules/**'
+				'!node_modules/**',
+				'!vendor/**'
 			]
 		}
 	} );
