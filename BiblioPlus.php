@@ -170,7 +170,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version' => $wgBiblioPlusVersion,
 	'author' => array( 'Karen Eddy', 'Code from the Biblio extension by Martin Jambon' ),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
-	'license-name' => 'GPL-2.0+',
+	'license-name' => 'GPL-2.0-or-later',
 );
 
 $moduleTemplate = array(
