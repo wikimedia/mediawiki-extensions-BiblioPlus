@@ -145,62 +145,16 @@
  * Setup for BiblioPlus extension
  * @author Karen Eddy
  */
-
-if (!defined('MEDIAWIKI')) {
-	exit ;
-}
-
-/*
-  Time To Live; store var in the cache for CACHE_TTL seconds.
-*/
-define('CACHE_TTL', 3600 * 24);
-
-$wgBiblioPlusForce = true;
-$wgBiblioPlusVersion = "1.2.0";
-
-$dir = dirname(__FILE__) . '/';
-$wgAutoloadClasses['BiblioXml'] = $dir . 'BiblioXml.php';
-$wgAutoloadClasses['BiblioPlus'] = $dir . 'BiblioPlus.body.php';
-$wgMessagesDirs['BiblioPlus'] = __DIR__ . '/i18n';
-
-$wgExtensionCredits['parserhook'][] = array(
-	'path' => __FILE__,
-	'name' => 'BiblioPlus',
-	'descriptionmsg' => 'biblioplus-desc',
-	'version' => $wgBiblioPlusVersion,
-	'author' => array( 'Karen Eddy', 'Code from the Biblio extension by Martin Jambon' ),
-	'url' => 'https://www.mediawiki.org/wiki/Extension:BiblioPlus',
-	'license-name' => 'GPL-2.0-or-later',
-);
-
-$moduleTemplate = array(
-	'localBasePath' => $dir . 'resources/',
-	'remoteExtPath' => 'BiblioPlus/resources/'
-);
-
-$wgResourceModules['ext.biblioPlus.qtip'] = $moduleTemplate + array(
-	'scripts' => array('ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.js'),
-	'styles' => 'ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.css',
-);
-
-$wgResourceModules['ext.biblioPlus.qtip.config'] = $moduleTemplate + array(
-	'scripts' => array('ext.biblioPlus.qtip.config.js'),
-	'dependencies' => array('ext.biblioPlus.qtip')
-);
-
-$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-$wgHooks['ParserFirstCallInit'][] = 'biblioPlusSetup';
-
-function onBeforePageDisplay(&$out)
-{
-	$out->addModules('ext.biblioPlus.qtip.config');
-	return true;
-}
-
-function biblioPlusSetup( Parser $parser ) {
-	$biblio = new BiblioPlus;
-	$parser -> setHook("cite", array($biblio,'biblioRenderCite'));
-	$parser -> setHook("nocite", array($biblio, 'biblioRenderNocite'));
-	$parser -> setHook("biblio", array($biblio, 'biblioRenderBiblio'));
-	return true;
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'BiblioPlus' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['BiblioPlus'] = __DIR__ . '/i18n';
+	wfWarn(
+		'Deprecated PHP entry point used for the BiblioPlus extension. ' .
+		'Please use wfLoadExtension instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the BiblioPlus extension requires MediaWiki 1.29+' );
 }
