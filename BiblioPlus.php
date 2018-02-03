@@ -185,8 +185,7 @@ $wgResourceModules['ext.biblioPlus.qtip'] = $moduleTemplate + array(
 
 $wgResourceModules['ext.biblioPlus.qtip.config'] = $moduleTemplate + array(
 	'scripts' => array('ext.biblioPlus.qtip.config.js'),
-	'dependencies' => array('ext.biblioPlus.qtip'),
-	'position' => 'top'
+	'dependencies' => array('ext.biblioPlus.qtip')
 );
 
 $wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
