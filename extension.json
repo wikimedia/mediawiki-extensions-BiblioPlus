@@ -35,8 +35,7 @@
 			],
 			"dependencies": [
 				"ext.biblioPlus.qtip"
-			],
-			"position": "top"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
