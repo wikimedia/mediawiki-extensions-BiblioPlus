@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ravichandra"
+			"Ravichandra",
+			"Chaduvari"
 		]
 	},
 	"biblioplus-doi-tooltip": "ప్రచురణకర్త నుంచి వ్యాసం కొనండి లేదా చూడండి",
-	"biblioplus-pmid-tooltip": "ప్రచురణకర్త నుంచి వ్యాసం కొనండి లేదా చూడండి(అందుబాటులో ఉంటే)",
+	"biblioplus-pmid-tooltip": "ప్రచురణకర్త నుంచి వ్యాసం కొనండి లేదా చూడండి (అందుబాటులో ఉంటే)",
 	"biblioplus-isbn-tooltip": "isbndb.org లో పుస్తక సమాచారం"
 }
