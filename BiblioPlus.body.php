@@ -64,11 +64,11 @@ class BiblioPlus {
 	* @return string: The contents of the URL as a string.
 	*/
 	function fetchUrl( $url ) {
-		wfSuppressWarnings();
+		Wikimedia\suppressWarnings();
 		$oldUrlFopen = ini_set( 'allow_url_fopen', true );
 		$result = implode( '', file( $url ) );
 		ini_set( 'allow_url_fopen', $oldUrlFopen );
-		wfRestoreWarnings();
+		Wikimedia\restoreWarnings();
 		return $result;
 	}
 
@@ -151,7 +151,7 @@ class BiblioPlus {
 			define( 'EUTILS_ROOT', "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/" );
 			define( 'ESUMMARY_URL', EUTILS_ROOT . 'esummary.fcgi' );
 
-			wfSuppressWarnings();
+			Wikimedia\suppressWarnings();
 			$query = array( 'db' => 'pubmed',
 				'id' => implode( ',', $pmids ),
 				'version' => '2.0',
@@ -167,7 +167,7 @@ class BiblioPlus {
 				if ( $response !== false ) {
 					return $response;
 				}
-			wfRestoreWarnings();
+			Wikimedia\restoreWarnings();
 			}
 		}
 		return '';
