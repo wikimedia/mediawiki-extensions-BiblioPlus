@@ -1,10 +1,10 @@
 jQuery( document ).ready( function () {
-	var key;
-	var ref;
+	var key,
+		ref;
 
-	jQuery( '.tooltip-from-element' ).qtip ( {
+	jQuery( '.tooltip-from-element' ).qtip( {
 		content: {
-			text: function() {
+			text: function () {
 				key = jQuery( this ).attr( 'href' );
 				ref = jQuery( key ).html();
 				if ( ref.length !== 0 ) {
@@ -13,7 +13,7 @@ jQuery( document ).ready( function () {
 			}
 		},
 		style: {
-			classes: 'qtip-shadow qtip-bootstrap'			
+			classes: 'qtip-shadow qtip-bootstrap'
 		},
 		hide: {
 			fixed: true,
@@ -24,8 +24,8 @@ jQuery( document ).ready( function () {
 			my: 'top left',
 			at: 'bottom center',
 			adjust: {
-				method: 'flip',
+				method: 'flip'
 			}
 		}
-	});
-});
+	} );
+} );
