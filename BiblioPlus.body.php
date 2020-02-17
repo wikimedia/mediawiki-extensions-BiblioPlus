@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
 * Class that takes PubMed pmids and ISBN numbers and calls the appropriate online service
 * to get the full reference.  The references are then formatted for output in the references section
@@ -155,7 +158,7 @@ class BiblioPlus {
 			$query = array( 'db' => 'pubmed',
 				'id' => implode( ',', $pmids ),
 				'version' => '2.0',
-				'tool' => $wgSitename, 
+				'tool' => $wgSitename,
 				'email' => $wgEmergencyContact );
 
 			$params = array( 'http' => array( 'method' => 'POST', 'content' => http_build_query( $query ) ) );
@@ -654,7 +657,7 @@ class BiblioPlus {
 	* @return string: The parsed text.
 	*/
 	function parseFreetext( $pdata, $wikitext ) {
-		$localParser = new Parser();
+		$localParser = MediaWikiServices::getInstance()->getParserFactory()->create();
 		$parserResult = $localParser->parse( $wikitext, $pdata['title'], $pdata['options'], false );
 		return trim( $parserResult->getText() );
 	}
