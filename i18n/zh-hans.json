@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Duolaimi",
 			"Hzy980512",
-			"Yfdyh000",
-			"Mywood",
 			"Impersonator 1",
-			"Duolaimi"
+			"Mywood",
+			"Yfdyh000"
 		]
 	},
 	"biblioplus-desc": "自动从PubMed和ISBN数据库检索引文",

@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Farras",
-			"Arifin.wijaya"
+			"Arifin.wijaya",
+			"Farras"
 		]
 	},
 	"biblioplus-desc": "Secara otomatis mengambil kutipan dari PubMed dan database ISBN",
