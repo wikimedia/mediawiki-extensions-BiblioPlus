@@ -5,7 +5,6 @@ module.exports = function ( grunt ) {
 
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
 
 	grunt.initConfig( {
 		eslint: {
@@ -13,22 +12,15 @@ module.exports = function ( grunt ) {
 				cache: true
 			},
 			all: [
-				'**/*.js',
+				'**/*.{js,json}',
 				'!node_modules/**',
 				'!vendor/**',
 				'!resources/ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.js'
 			]
 		},
-		banana: conf.MessagesDirs,
-		jsonlint: {
-			all: [
-				'**/*.json',
-				'!node_modules/**',
-				'!vendor/**'
-			]
-		}
+		banana: conf.MessagesDirs
 	} );
 
-	grunt.registerTask( 'test', [ 'eslint', 'jsonlint', 'banana' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'banana' ] );
 	grunt.registerTask( 'default', 'test' );
 };
