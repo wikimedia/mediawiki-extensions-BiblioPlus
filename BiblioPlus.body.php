@@ -436,9 +436,9 @@ class BiblioPlus {
 	*/
 	function isbnDbQuery( $isbns ) {
 		$result = array();
-		$cache = wfGetMainCache();
+		$cache = ObjectCache::getLocalClusterInstance();
 		foreach ( $isbns as $isbn ) {
-			$cacheKey = wfMemckey( 'Biblio', $isbn );
+			$cacheKey = $cache->makeKey( 'Biblio', $isbn );
 			$res = $cache->get( $cacheKey );
 			if ( $res ) {
 				wfDebug( "Biblio cache hit $cacheKey\n" );
@@ -813,9 +813,9 @@ class BiblioPlus {
 		$pmidsToFetch = array();
 
 		// caching features
-		$cache = wfGetMainCache();
+		$cache = ObjectCache::getLocalClusterInstance();
 		foreach ( $pmids as $pmid ) {
-			$cacheKey = wfMemcKey( 'Biblio', $pmid );
+			$cacheKey = $cache->makeKey( 'Biblio', $pmid );
 			$res = $cache->get( $cacheKey );
 			if ( $res ) {
 				wfDebug( "Biblio cache hit $cacheKey\n" );
@@ -839,7 +839,7 @@ class BiblioPlus {
 
 		// set the cache for the formatted pmid citations just returned from eSummary
 		foreach ( $pmentries as $pmid => $value ) {
-			$cacheKey = wfMemcKey( 'Biblio' , $pmid );
+			$cacheKey = $cache->makeKey( 'Biblio' , $pmid );
 			$cache->set( $cacheKey, $value, CACHE_TTL );
 		}
 
