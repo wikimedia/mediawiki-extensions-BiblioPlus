@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\AtEase\AtEase;
 
 /**
 * Class that takes PubMed pmids and ISBN numbers and calls the appropriate online service
@@ -67,11 +68,11 @@ class BiblioPlus {
 	* @return string: The contents of the URL as a string.
 	*/
 	function fetchUrl( $url ) {
-		Wikimedia\suppressWarnings();
+		AtEase::suppressWarnings();
 		$oldUrlFopen = ini_set( 'allow_url_fopen', true );
 		$result = implode( '', file( $url ) );
 		ini_set( 'allow_url_fopen', $oldUrlFopen );
-		Wikimedia\restoreWarnings();
+		AtEase::restoreWarnings();
 		return $result;
 	}
 
