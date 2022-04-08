@@ -155,7 +155,7 @@ class BiblioPlus {
 			define( 'EUTILS_ROOT', "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/" );
 			define( 'ESUMMARY_URL', EUTILS_ROOT . 'esummary.fcgi' );
 
-			Wikimedia\suppressWarnings();
+			AtEase::suppressWarnings();
 			$query = array( 'db' => 'pubmed',
 				'id' => implode( ',', $pmids ),
 				'version' => '2.0',
@@ -169,10 +169,11 @@ class BiblioPlus {
 			if ( $fp ) {
 				$response = stream_get_contents( $fp );
 				if ( $response !== false ) {
+					AtEase::restoreWarnings();
 					return $response;
 				}
-			Wikimedia\restoreWarnings();
 			}
+			AtEase::restoreWarnings();
 		}
 		return '';
 	}
