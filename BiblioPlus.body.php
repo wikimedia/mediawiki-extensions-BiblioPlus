@@ -401,7 +401,7 @@ class BiblioPlus {
 	*/
 	function isbnDbQueryOne( $isbn ) {
 		$accessKey = $this->getRandomElement( $this->getIsbnDbKeys() );
-		$url = "http://isbndb.com/api/books.xml?access_key=${accessKey}&index1=isbn&value1=${isbn}";
+		$url = "http://isbndb.com/api/books.xml?access_key={$accessKey}&index1=isbn&value1={$isbn}";
 		$text = $this->fetchUrl( $url );
 		$xmlParser = new BiblioXml();
 		$data = $xmlParser->parse( $text );
