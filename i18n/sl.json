@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"biblioplus-desc": "Omogoča samodejno pridobivanje citatov iz PubMeda in podatkovne zbirke ISBN",
+	"biblioplus-doi-tooltip": "Ogled ali nakup članka pri založniku",
+	"biblioplus-pmid-tooltip": "Oglejte si ali kupite članek pri založniku (če je na voljo)",
+	"biblioplus-isbn-tooltip": "Informacije o knjigi na isbndb.org",
+	"biblioplus-medline-abstracts": "Vsi povzetki Medline:",
+	"biblioplus-pubmed-abstracts": "Vsi povzetki v PubMedu",
+	"biblioplus-hubmed-abstracts": "Vsi povzetki v HubMedu",
+	"biblioplus-vkey-title": "povezava do podatkovne zbirke bibliografij"
+}
