@@ -10,7 +10,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.34.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"MessagesDirs": {
 		"BiblioPlus": [
@@ -18,9 +18,9 @@
 		]
 	},
 	"AutoloadClasses": {
-		"BiblioXml": "BiblioXml.php",
-		"BiblioPlus": "BiblioPlus.body.php",
-		"BiblioPlusHooks": "BiblioPlus.hooks.php"
+		"BiblioXml": "src/BiblioXml.php",
+		"BiblioPlus": "src/BiblioPlus.php",
+		"BiblioPlusHooks": "src/BiblioPlusHooks.php"
 	},
 	"ResourceModules": {
 		"ext.biblioPlus.qtip": {
