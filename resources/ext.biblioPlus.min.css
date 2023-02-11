@@ -7,6 +7,7 @@
 
 /* Shrink the line height a bit from default 20px */
 .qtip-bootstrap {
+	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 	line-height: 18px;
 }
 
@@ -14,4 +15,3 @@
 .qtip-content {
 	font-size: 0.95em;
 }
-
