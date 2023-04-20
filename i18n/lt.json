@@ -8,5 +8,6 @@
 	"biblioplus-desc": "Automatiškai nuskaito citatas iš PubMed ir ISBN duomenų bazės",
 	"biblioplus-doi-tooltip": "Peržiūrėti ar pirkti straipsnį iš leidėjo",
 	"biblioplus-pmid-tooltip": "Peržiūrėti ar pirkti straipsnį iš leidėjo (jei įmanoma)",
-	"biblioplus-isbn-tooltip": "Knygų informacija isbndb.org"
+	"biblioplus-isbn-tooltip": "Knygų informacija isbndb.org",
+	"biblioplus-vkey-title": "nuoroda į bibliografijos duomenų bazę"
 }
