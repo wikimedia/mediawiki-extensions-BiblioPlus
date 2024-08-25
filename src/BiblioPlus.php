@@ -83,8 +83,13 @@ class BiblioPlus {
 	 * @return string The source code of the input page.
 	 */
 	function fetchPage( $title ) {
-		$rev = Revision::newFromTitle( $title );
-		return ContentHandler::getContentText( $rev->getContent() );
+		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+		$content = $wikiPage->getContent();
+		if ( $content instanceof TextContent ) {
+			return $content->getText();
+		} else {
+			return "";
+		}
 	}
 
 	/**
