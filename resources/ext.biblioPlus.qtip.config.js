@@ -1,5 +1,5 @@
-jQuery( document ).ready( function () {
-	var key,
+jQuery( document ).ready( () => {
+	let key,
 		ref;
 
 	jQuery( '.tooltip-from-element' ).qtip( {
