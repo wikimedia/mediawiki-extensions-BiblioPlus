@@ -1,0 +1,10 @@
+[
+	{
+		"resourceModule": "ext.biblioPlus.qtip.config",
+		"maxSize": null
+	},
+	{
+		"resourceModule": "ext.biblioPlus.qtip",
+		"maxSize": null
+	}
+]
