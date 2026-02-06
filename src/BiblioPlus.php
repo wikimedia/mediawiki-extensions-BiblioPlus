@@ -2,7 +2,6 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use Wikimedia\AtEase\AtEase;
 
 /**
  * Class that takes PubMed pmids and ISBN numbers and calls the appropriate online service
@@ -69,11 +68,11 @@ class BiblioPlus {
 	 * @return string The contents of the URL as a string.
 	 */
 	function fetchUrl( $url ) {
-		AtEase::suppressWarnings();
-		$oldUrlFopen = ini_set( 'allow_url_fopen', true );
+		// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+		$oldUrlFopen = @ini_set( 'allow_url_fopen', true );
 		$result = implode( '', file( $url ) );
-		ini_set( 'allow_url_fopen', $oldUrlFopen );
-		AtEase::restoreWarnings();
+		// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+		@ini_set( 'allow_url_fopen', $oldUrlFopen );
 		return $result;
 	}
 
@@ -160,7 +159,6 @@ class BiblioPlus {
 			define( 'EUTILS_ROOT', "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/" );
 			define( 'ESUMMARY_URL', EUTILS_ROOT . 'esummary.fcgi' );
 
-			AtEase::suppressWarnings();
 			$query = [ 'db' => 'pubmed',
 				'id' => implode( ',', $pmids ),
 				'version' => '2.0',
@@ -170,15 +168,14 @@ class BiblioPlus {
 			$params = [ 'http' => [ 'method' => 'POST', 'content' => http_build_query( $query ) ] ];
 
 			$context = stream_context_create( $params );
-			$fp = fopen( ESUMMARY_URL, 'rb', false, $context );
+			// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+			$fp = @fopen( ESUMMARY_URL, 'rb', false, $context );
 			if ( $fp ) {
 				$response = stream_get_contents( $fp );
 				if ( $response !== false ) {
-					AtEase::restoreWarnings();
 					return $response;
 				}
 			}
-			AtEase::restoreWarnings();
 		}
 		return '';
 	}
