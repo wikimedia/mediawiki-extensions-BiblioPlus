@@ -4,8 +4,6 @@
 		<exclude name="Generic.Files.LineLength.TooLong" />
 		<exclude name="MediaWiki.Commenting.CommentBeforeClass.SpacingAfter" />
 		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName" />
-		<exclude name="MediaWiki.Usage.ForbiddenFunctions.xml_parser_free" />
-		<exclude name="MediaWiki.Usage.ForbiddenFunctions.xml_set_object" />
 		<exclude name="Squiz.Scope.MethodScope.Missing" />
 	</rule>
 	<file>.</file>

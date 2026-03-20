@@ -65,11 +65,19 @@ class BiblioXml {
 	 */
 	function parse( $text ) {
 		$this->parser = xml_parser_create();
-		xml_set_object( $this->parser, $this );
+		if ( PHP_VERSION_ID < 80000 ) {
+			// MW <1.42
+			// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.xml_set_object
+			xml_set_object( $this->parser, $this );
+		}
 		xml_set_element_handler( $this->parser, "tag_open", "tag_close" );
 		xml_set_character_data_handler( $this->parser, "cdata" );
 		xml_parse( $this->parser, $text, true );
-		xml_parser_free( $this->parser );
+		if ( PHP_VERSION_ID < 80000 ) {
+			// MW <1.42
+			// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.xml_parser_free
+			xml_parser_free( $this->parser );
+		}
 		return $this->data;
 	}
 }
