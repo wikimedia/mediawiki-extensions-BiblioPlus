@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
@@ -11,5 +12,5 @@
 	"biblioplus-medline-abstracts": "Svi odlomci iz Medline:",
 	"biblioplus-pubmed-abstracts": "Svi odlomci iz PubMed",
 	"biblioplus-hubmed-abstracts": "Svi odlomci iz PubMed",
-	"biblioplus-vkey-title": "Poveznica na bibliografsku bazu podataka"
+	"biblioplus-vkey-title": "veza do bibliografske baze podataka"
 }
