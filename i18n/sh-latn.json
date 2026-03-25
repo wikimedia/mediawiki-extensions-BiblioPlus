@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"Aca"
 		]
 	},
 	"biblioplus-desc": "Automatski dohvaća referencije iz PubMed-a i ISBN baze",
@@ -11,5 +12,5 @@
 	"biblioplus-medline-abstracts": "Svi odlomci iz Medline:",
 	"biblioplus-pubmed-abstracts": "Svi odlomci iz PubMed",
 	"biblioplus-hubmed-abstracts": "Svi odlomci iz PubMed",
-	"biblioplus-vkey-title": "Poveznica na bibliografsku bazu podataka"
+	"biblioplus-vkey-title": "veza do bibliografske baze podataka"
 }
