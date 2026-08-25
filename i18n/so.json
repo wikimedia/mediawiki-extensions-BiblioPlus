@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"biblioplus-desc": "Si otomaatig ah ayuu u soo helaa tixraacyada PubMed iyo kaydka ISBN.",
+	"biblioplus-doi-tooltip": "Ka eeg ama ka iibso maqaalka daabacaha",
+	"biblioplus-pmid-tooltip": "Ka eeg ama ka iibso maqaalka daabacaha (haddii la heli karo)",
+	"biblioplus-isbn-tooltip": "Macluumaadka buugga ee isbndb.org",
+	"biblioplus-medline-abstracts": "Dhammaan qoraallada kooban ee Medline:",
+	"biblioplus-pubmed-abstracts": "Dhammaan qoraallada kooban ee PubMed",
+	"biblioplus-hubmed-abstracts": "Dhammaan qoraallada kooban ee HubMed",
+	"biblioplus-vkey-title": "Xiriirka kaydka buug yareedka"
+}
