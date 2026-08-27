@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"biblioplus-desc": "Automaticky získava citácie z databáz PubMed a ISBN",
+	"biblioplus-doi-tooltip": "Zobraziť alebo kúpiť článok od vydavateľa",
+	"biblioplus-pmid-tooltip": "Zobraziť alebo kúpiť článok od vydavateľa (ak je dostupný)",
+	"biblioplus-isbn-tooltip": "Informácie o knihe na isbndb.org",
+	"biblioplus-medline-abstracts": "Všetky abstrakty Medline:",
+	"biblioplus-pubmed-abstracts": "Všetky abstrakty na PubMede",
+	"biblioplus-hubmed-abstracts": "Všetky abstrakty na HubMede",
+	"biblioplus-vkey-title": "odkaz na bibliografickú databázu"
+}
