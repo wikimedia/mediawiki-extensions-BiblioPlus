@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"biblioplus-desc": "په خپلکاري ډول د پب‌مېډ او آی‌اېس‌بي‌اېن اومتوک‌اډانې څخه سرچينې ترلاسه کوي",
+	"biblioplus-doi-tooltip": "د خپروونکي څخه ليکنه کتل يا پيرل",
+	"biblioplus-pmid-tooltip": "د خپروونکي څخه ليکنه کتل يا پيرل (که شتون ولري)",
+	"biblioplus-isbn-tooltip": "isbndb.org کې د کتاب مالومات",
+	"biblioplus-medline-abstracts": "د مېډلاين ټول لنډيزونه:",
+	"biblioplus-pubmed-abstracts": "په پب‌مېډ کې ټول لنډيزونه",
+	"biblioplus-hubmed-abstracts": "په هب‌مېډ کې ټول لنډيزونه",
+	"biblioplus-vkey-title": "د کتاب‌پوهنې اومتوک‌اډانې سره تړونی ورکول"
+}
